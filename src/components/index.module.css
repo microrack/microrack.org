@@ -33,7 +33,7 @@
   color: #663399;
 }
 
-.listItemLink {
+.listItemHeading {
   color: var(--color-primary);
   font-weight: bold;
 }
