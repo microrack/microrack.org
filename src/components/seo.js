@@ -15,7 +15,6 @@ function Seo({ description, title, children }) {
         site {
           siteMetadata {
             title
-            description
             author
           }
         }
@@ -23,7 +22,7 @@ function Seo({ description, title, children }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description || '';
   const defaultTitle = site.siteMetadata?.title
 
   return (

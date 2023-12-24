@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -13,7 +12,7 @@ const links = [
       "Get complete kit and build unique instrument, learn about synthesis and explore sound with no limits!",
   },
   {
-    text: "Highly accesible",
+    text: "Highly accessible",
     description:
       "All parts are very low cost and you can find them at the nearest components shop.",
   },
@@ -43,8 +42,6 @@ const moreLinks = [
   }
 ]
 
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
 const IndexPage = () => (
   <Layout>
     <div className={styles.textCenter}>
@@ -52,6 +49,7 @@ const IndexPage = () => (
         micro<b>Rack</b> — sound is all yours!
       </h1>
     </div>
+
     <ul className={styles.list}>
       {links.map(link => (
         <li key={link.url} className={styles.listItem}>
@@ -62,12 +60,11 @@ const IndexPage = () => (
         </li>
       ))}
     </ul>
-    
-    
+
     <div className={styles.textCenter}>
       {moreLinks.map((link, i) => (
         <React.Fragment key={link.url}>
-          <a href={`${link.url}${utmParameters}`}>{link.text}</a>
+          <a href={link.url}>{link.text}</a>
           {i !== moreLinks.length - 1 && <> · </>}
         </React.Fragment>
       ))}
@@ -84,8 +81,7 @@ const IndexPage = () => (
         style={{ marginBottom: `var(--space-3)` }}
       />
     </div>
-    
-    
+
   </Layout>
 )
 
@@ -94,6 +90,6 @@ const IndexPage = () => (
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="μR" />
 
 export default IndexPage
