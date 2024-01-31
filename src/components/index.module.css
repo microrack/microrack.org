@@ -13,6 +13,25 @@
   margin-top: var(--size-gap);
 }
 
+.button {
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: var(--space-1);
+  color: #FFF;
+  cursor: pointer;
+  font-size: var(--size-1);
+  font-weight: bold;
+  padding: var(--space-2) var(--space-3);
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: var(--color-secondary);
+}
+
 .listItem {
   margin: 0;
 }
