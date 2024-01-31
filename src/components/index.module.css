@@ -68,6 +68,15 @@
   margin-bottom: var(--size-gap);
 }
 
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1);
+  
+  margin-bottom: var(--size-gap);
+}
+
 .intro {
   max-width: none;
   line-height: var(--line-height-loose);

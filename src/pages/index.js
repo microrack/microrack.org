@@ -50,25 +50,7 @@ const IndexPage = () => (
       </h1>
     </div>
 
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/synth.jpg"
-        loading="eager"
-        width={300}
-        quality={95}
-        formats={["auto", "png"]}
-        alt="microRack - accessible modular syntesizer"
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-    </div>
-
-    <div className={styles.textCenter}>
-      <a
-        target="_blank"
-        href="https://forms.gle/CgNbhLSbxbahZK8BA"
-        className={styles.button}
-      >Join the waitlist!</a>
-    </div>
+    
 
 
     <ul className={styles.list}>
@@ -83,12 +65,41 @@ const IndexPage = () => (
     </ul>
 
     <div className={styles.textCenter}>
+      <a
+        target="_blank"
+        href="https://forms.gle/CgNbhLSbxbahZK8BA"
+        className={styles.button}
+      >Join the waitlist!</a>
+    </div>
+
+    <div className={styles.textCenter}>
       {moreLinks.map((link, i) => (
         <React.Fragment key={link.url}>
           <a href={link.url}>{link.text}</a>
           {i !== moreLinks.length - 1 && <> · </>}
         </React.Fragment>
       ))}
+    </div>
+
+    <div className={styles.images}>
+      <StaticImage
+        src="../images/synth.jpg"
+        loading="eager"
+        width={300}
+        quality={95}
+        formats={["auto", "png"]}
+        alt="microRack - accessible modular syntesizer"
+        style={{ marginBottom: `var(--space-3)` }}
+      />
+      <StaticImage
+        src="../images/synth2.jpg"
+        loading="eager"
+        width={300}
+        quality={95}
+        formats={["auto", "png"]}
+        alt="microRack - accessible modular syntesizer"
+        style={{ marginBottom: `var(--space-3)` }}
+      />
     </div>
 
   </Layout>
