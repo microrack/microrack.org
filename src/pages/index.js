@@ -50,7 +50,13 @@ const IndexPage = () => (
       </h1>
     </div>
 
-    
+    <div className={styles.textCenter}>
+      <a
+        target="_blank"
+        href="https://forms.gle/CgNbhLSbxbahZK8BA"
+        className={styles.button}
+      >Join the waitlist!</a>
+    </div>
 
 
     <ul className={styles.list}>
@@ -63,14 +69,6 @@ const IndexPage = () => (
         </li>
       ))}
     </ul>
-
-    <div className={styles.textCenter}>
-      <a
-        target="_blank"
-        href="https://forms.gle/CgNbhLSbxbahZK8BA"
-        className={styles.button}
-      >Join the waitlist!</a>
-    </div>
 
     <div className={styles.textCenter}>
       {moreLinks.map((link, i) => (
