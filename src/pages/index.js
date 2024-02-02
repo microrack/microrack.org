@@ -50,6 +50,27 @@ const IndexPage = () => (
       </h1>
     </div>
 
+    <div className={styles.images}>
+      <StaticImage
+        src="../images/synth.jpg"
+        loading="eager"
+        width={300}
+        quality={95}
+        formats={["auto", "png"]}
+        alt="microRack - accessible modular syntesizer"
+        style={{ marginBottom: `var(--space-3)` }}
+      />
+      <StaticImage
+        src="../images/synth2.jpg"
+        loading="eager"
+        width={300}
+        quality={95}
+        formats={["auto", "png"]}
+        alt="microRack - accessible modular syntesizer"
+        style={{ marginBottom: `var(--space-3)` }}
+      />
+    </div>
+
     <div className={styles.textCenter}>
       <a
         target="_blank"
@@ -77,27 +98,6 @@ const IndexPage = () => (
           {i !== moreLinks.length - 1 && <> · </>}
         </React.Fragment>
       ))}
-    </div>
-
-    <div className={styles.images}>
-      <StaticImage
-        src="../images/synth.jpg"
-        loading="eager"
-        width={300}
-        quality={95}
-        formats={["auto", "png"]}
-        alt="microRack - accessible modular syntesizer"
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <StaticImage
-        src="../images/synth2.jpg"
-        loading="eager"
-        width={300}
-        quality={95}
-        formats={["auto", "png"]}
-        alt="microRack - accessible modular syntesizer"
-        style={{ marginBottom: `var(--space-3)` }}
-      />
     </div>
 
   </Layout>
