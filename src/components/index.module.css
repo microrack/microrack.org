@@ -73,8 +73,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-1);
-  
-  margin-bottom: var(--size-gap);
+  margin-bottom: var(--size-gutter);
 }
 
 .intro {

@@ -45,12 +45,9 @@ const moreLinks = [
 const IndexPage = () => (
   <Layout>
     <div className={styles.textCenter}>
-      <h1 className={styles.heading}>
-        micro<b>Rack</b> — sound is all yours!
+      <h1>
+        <b>microRack</b> —&nbsp;sound all yours
       </h1>
-    </div>
-
-    <div className={styles.images}>
       <StaticImage
         src="../images/synth.jpg"
         loading="eager"
@@ -60,6 +57,18 @@ const IndexPage = () => (
         alt="microRack - accessible modular syntesizer"
         style={{ marginBottom: `var(--space-3)` }}
       />
+      <div className={styles.textCenter}>
+        The most accessible modular synthesizer for everyone. Get the affordable kit, build your own instrument, learn about synthesis and explore sound with no limits!
+      </div>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://forms.gle/CgNbhLSbxbahZK8BA"
+        className={styles.button}
+      >Join the waitlist!</a>
+    </div>
+
+    <div className={styles.images}>
       <StaticImage
         src="../images/synth2.jpg"
         loading="eager"
@@ -71,13 +80,7 @@ const IndexPage = () => (
       />
     </div>
 
-    <div className={styles.textCenter}>
-      <a
-        target="_blank"
-        href="https://forms.gle/CgNbhLSbxbahZK8BA"
-        className={styles.button}
-      >Join the waitlist!</a>
-    </div>
+    
 
 
     <ul className={styles.list}>
@@ -94,7 +97,7 @@ const IndexPage = () => (
     <div className={styles.textCenter}>
       {moreLinks.map((link, i) => (
         <React.Fragment key={link.url}>
-          <a href={link.url}>{link.text}</a>
+          <a href={link.url} target="_blank" rel="noreferrer">{link.text}</a>
           {i !== moreLinks.length - 1 && <> · </>}
         </React.Fragment>
       ))}
