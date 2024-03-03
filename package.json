@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "predeploy": "./increment-version.sh",
+    "deploy": "npm run build && npm run export && git push origin HEAD:release",
     "build": "next build",
+    "export": "next export",
+    "dev": "next dev",
     "start": "next start",
     "lint": "next lint"
   },

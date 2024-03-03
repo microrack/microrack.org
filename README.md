@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Project README
+
+This is a MICRORACK website project, based on [Next.js](https://nextjs.org/) with React and CSS Modules.
 
 ## Getting Started
 
-First, run the development server:
+### Environment Setup
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Install Node.js**: Ensure Node.js is installed on your system. This project requires Node.js 12.x or later.
+2. **Clone the Repository**: Clone this project to your local machine.
+   ```bash
+   git clone <repository-url>
+   ```
+3. **Install Dependencies**: Navigate to the project directory and install its dependencies.
+   ```bash
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run and Preview the Project
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Development Server**:
+  Start the development server to preview the project locally.
+  ```bash
+  npm run dev
+  ```
+  Open [http://localhost:3000](http://localhost:3000) in your browser to see the project live. The development server supports hot reloading; changes you make in the code will automatically refresh in the browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Editing**: To modify the project, edit the files within the `pages` directory. For example, `pages/index.js` is a good starting point.
+
+### Deployment
+
+- **Preparation**: Ensure all changes are committed, including any version bumps or final adjustments needed for deployment.
+- **Deploy Command**: Run the deployment command to build your project and push changes for deployment.
+  ```bash
+  npm run deploy
+  ```
+  This command handles the build process and pushes the build artifacts to the appropriate branch, triggering the configured GitHub Actions workflow for deployment.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+For a deeper dive into Next.js features and API, the following resources are highly recommended:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs) - Comprehensive guides and the API reference.
+- [Learn Next.js](https://nextjs.org/learn) - An interactive tutorial for beginners and advanced users alike.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Contributions are always welcome! Please refer to the project's issue tracker or discussion board for areas where you can help. Ensure to follow the project's contribution guidelines.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Feedback and Support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For feedback or support, please create an issue in the GitHub repository. Your input helps make this project better for everyone.
