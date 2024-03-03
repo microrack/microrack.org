@@ -17,3 +17,6 @@ git add package.json package-lock.json
 
 # Commit the version bump
 git commit -m "chore(release): bump version to $(node -p "require('./package.json').version")"
+
+
+echo "Version incremented to $(node -p "require('./package.json').version") succesfully. Push your vhanges and create a PR."
