@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "predeploy": "./increment-version.sh",
-    "deploy": "npm run build && git push origin",
+    "deploy": "npm run lint && npm run build && it push origin",
     "build": "next build",
     "dev": "next dev",
     "start": "next start",

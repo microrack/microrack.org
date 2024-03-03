@@ -31,11 +31,11 @@ This is a MICRORACK website project, based on [Next.js](https://nextjs.org/) wit
 ### Deployment
 
 - **Preparation**: Ensure all changes are committed, including any version bumps or final adjustments needed for deployment.
-- **Deploy Command**: Run the deployment command to build your project and push changes for deployment.
+- **Deploy Command**: Run the deployment command to lint, test successfull build of your project and push all changes for deployment.
   ```bash
   npm run deploy
   ```
-  This command handles the build process and pushes the build artifacts to the appropriate branch, triggering the configured GitHub Actions workflow for deployment.
+  This command handles the build process and pushes everything the appropriate branch, triggering the configured GitHub Actions workflow for deployment.
 
 ## Learn More
 
