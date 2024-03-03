@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "predeploy": "./increment-version.sh",
-    "deploy": "npm run build && npm run export && git push origin HEAD:release",
+    "deploy": "npm run build && npm run export && git push origin",
     "build": "next build",
     "export": "next export",
     "dev": "next dev",

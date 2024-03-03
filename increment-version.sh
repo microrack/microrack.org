@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Enter version type (patch, minor, major):"
+echo "Current version is $(node -p "require('./package.json').version"). Enter new changes type (patch, minor, major):"
 read VERSION_TYPE
 
 # Validate input
@@ -19,4 +19,4 @@ git add package.json package-lock.json
 git commit -m "chore(release): bump version to $(node -p "require('./package.json').version")"
 
 
-echo "Version incremented to $(node -p "require('./package.json').version") succesfully. Push your vhanges and create a PR."
+echo "Version incremented to $(node -p "require('./package.json').version") succesfully."
