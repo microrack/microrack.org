@@ -16,4 +16,4 @@ npm version $VERSION_TYPE
 git add package.json package-lock.json
 
 # Commit the version bump
-git commit -m "chore(release): bump version to $(jq -r '.version' package.json)"
+git commit -m "chore(release): bump version to $(node -p "require('./package.json').version")"
