@@ -9,22 +9,22 @@ const links = [
   {
     text: "All modular",
     description:
-      "Get complete kit and build unique instrument, learn about synthesis and explore sound with no limits!",
+      "Build unique instruments, while learning about synthesis step by step",
   },
   {
     text: "Highly accessible",
     description:
-      "All parts are very low cost and you can find them at the nearest components shop.",
+      "Affordable kits and simple design for all kinds of users",
+  },
+  {
+    text: "Limitless variability",
+    description:
+      "Customize your setup and combine with anything you can imagine",
   },
   {
     text: "DIY & Open-source",
     description:
-      "All hardware and software are fully open-sourced. Feel free to contribute your ideas.",
-  },
-  {
-    text: "Impressing & Educative",
-    description:
-      "Learn by tutorials, connect to any device you can imagine and enjoy limitless sound variability!",
+      "Feel free to collaborate, contribute and implement new ideas",
   }
 ]
 const moreLinks = [
@@ -54,18 +54,18 @@ const IndexPage = () => (
         width={300}
         quality={95}
         formats={["auto", "png"]}
-        alt="microRack - accessible modular syntesizer"
+        alt="microRack - the most accessible modular syntesizer"
         style={{ marginBottom: `var(--space-3)` }}
       />
       <div className={styles.textCenter}>
-        The most accessible modular synthesizer for everyone. Get the affordable kit, build your own instrument, learn about synthesis and explore sound with no limits!
+        The most accessible modular synthesizer
       </div>
       <a
         target="_blank"
         rel="noreferrer"
         href="https://forms.gle/CgNbhLSbxbahZK8BA"
         className={styles.button}
-      >Join the waitlist!</a>
+      >Join the waitlist</a>
     </div>
 
     <div className={styles.images}>
