@@ -1,13 +1,13 @@
 
-# Project README
+# MICRORACK - The most accessible synthesizer
 
-This is a MICRORACK website project, based on [Next.js](https://nextjs.org/) with React and CSS Modules.
+This is a MICRORACK.ORG website project, based on [Next.js](https://nextjs.org/) with React and CSS Modules.
 
 ## Getting Started
 
 ### Environment Setup
 
-1. **Install Node.js**: Ensure Node.js is installed on your system. This project requires Node.js 12.x or later.
+1. **Install Node.js**: Ensure Node.js is installed on your system. This project requires Node.js 20.x or later.
 2. **Clone the Repository**: Clone this project to your local machine.
    ```bash
    git clone <repository-url>
@@ -31,7 +31,7 @@ This is a MICRORACK website project, based on [Next.js](https://nextjs.org/) wit
 ### Deployment
 
 - **Preparation**: Ensure all changes are committed, including any version bumps or final adjustments needed for deployment.
-- **Deploy Command**: Run the deployment command to lint, test successfull build of your project and push all changes for deployment.
+- **Deploy Command**: Run the deployment command to lint, test successful build of your project and push all changes for deployment.
   ```bash
   npm run deploy
   ```
