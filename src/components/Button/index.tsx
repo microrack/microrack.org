@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import classNames from 'classnames';
 
 import { ButtonProps } from './button.types';
@@ -8,31 +9,30 @@ import styles from "./button.module.css";
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
+  variant = 'secondary',
+  href,
+  text,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  const buttonClasses = classNames(
-    styles['storybook-button'], 
-    styles[`storybook-button--${size}`], 
-    mode ? styles[mode] : ''
-  );
+  const className = classNames(styles.button, styles[variant]);
 
-  return (
-    <button
-      type="button"
-      className={buttonClasses}
+  return href
+  ? (
+    <Link
+      href={href}
+      className={classNames(className, styles.link)}
       {...props}
     >
-      {label}
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
+      {text}
+    </Link>
+  )
+  : (
+    <button
+      type="button"
+      className={className}
+      {...props}
+    >
+      {text}
     </button>
   );
-};
+}

@@ -2,19 +2,15 @@ export type ButtonProps = {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
+  variant?: 'primary' | 'secondary' | 'action';
   /**
    * Button contents
    */
-  label: string;
+  text: string;
+  /**
+   * Link to navigate to
+   */
+  href?: string;
   /**
    * Optional click handler
    */
