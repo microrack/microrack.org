@@ -1,0 +1,14 @@
+.menu {
+  gap: 3vw;
+  display: flex;
+  justify-content:space-between;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+}
+
+.wide {
+  gap: 5vw;
+}

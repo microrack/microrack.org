@@ -1,0 +1,15 @@
+[
+	{
+		"title": "Home",
+		"href": "/"
+	},
+	{
+		"title": "Press",
+		"href": "/press"
+	},
+	{
+		"title": "Github",
+		"href": "http://www.github.com",
+		"external": true
+	}
+]
