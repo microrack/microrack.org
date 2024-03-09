@@ -1,0 +1,14 @@
+.dottedBackground {
+  position: relative;
+  width: 300px; /* Larger width */
+  height: 300px; /* Larger height */
+  overflow: hidden;
+}
+
+.dot {
+  position: absolute;
+  width: 3px; /* Dot size */
+  height: 3px;
+  background-color: #000;
+  transition: transform 0.1s ease;
+}
