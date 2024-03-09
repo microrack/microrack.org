@@ -19,15 +19,16 @@ export const Text = ({
   const className = classNames(
     styles.text,
     styles[size],
-    styles[weight],
     styles[color],
+    styles[weight],
+    props.className,
     {
       [styles.uppercase]: uppercase,
     },
   );
 
   return (
-    <Tag className={className} {...props}>
+    <Tag className={className}>
       {children}
     </Tag>
   );

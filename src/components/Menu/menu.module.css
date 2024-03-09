@@ -1,12 +1,18 @@
 .menu {
   gap: 3vw;
   display: flex;
+  margin-right: 2vw;
   justify-content:space-between;
 }
 
 .menu a {
   color: black;
   text-decoration: none;
+}
+
+.subtitle {
+  display: block;
+  position: absolute;
 }
 
 .wide {

@@ -23,16 +23,25 @@ export const Menu = ({
       {
         items.map((item: MenuItemProps, index) => {
           return (
-            <Link
-              key={index}
-              href={item.href}
-              title={item.title}
-              target={item.external ? '_blank' : '_self'}
-            >
-              <Text size='s' as="span" uppercase={uppercase}>
-                {item.title}
-              </Text>
-            </Link>
+            <div>
+              <Link
+                key={index}
+                href={item.href}
+                title={item.title}
+                target={item.external ? '_blank' : '_self'}
+              >
+                <Text size='s' as="span" uppercase={uppercase}>
+                  {item.title}
+                </Text>
+              </Link>
+              {
+                item.subtitle && (
+                  <Text className={styles.subtitle} size='xs' as="span" color='secondary'>
+                    {item.subtitle}
+                  </Text>
+                )
+              }
+            </div>
           );
         })
       }

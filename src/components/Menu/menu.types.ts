@@ -1,4 +1,5 @@
 export type MenuItemProps = {
+  subtitle?: string;
   external?: boolean;
   title: string;
   href: string;
