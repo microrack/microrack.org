@@ -16,12 +16,6 @@ export type StaticDotsProps = {
   /** Size of the dots. */
   dotSize: number;
 
-  /** Width of the drawing area. */
-  width: number;
-
-  /** Height of the drawing area. */
-  height: number;
-
   /** Space between dots. */
   dotSpacing: number;
 };

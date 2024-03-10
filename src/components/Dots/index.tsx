@@ -6,7 +6,6 @@ import type {DotProps} from '../Dot/dot.types';
 import styles from './dots.module.css';
 import { DotsProps, Configuration } from './dots.types';
 
-// Configuration constants for the component.
 const CONFIG: Configuration = {
   initialScale: 1,
   minScale: 0.25,
@@ -15,9 +14,7 @@ const CONFIG: Configuration = {
 /**
  * Universal Dots component that can render both static and interactive dots.
  */
-const Dots: React.FC<DotsProps> = ({
-  width,
-  height,
+export const Dots: React.FC<DotsProps> = ({
   dotSize,
   dotSpacing,
   influenceRadius,
@@ -26,26 +23,45 @@ const Dots: React.FC<DotsProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const [dots, setDots] = useState<Array<DotProps>>([]);
 
-  useEffect(() => {
-    // Generates the initial positions and scales for dots.
+  const updateDots = (width: number, height: number) => {
     const tempDots: Array<DotProps> = [];
     const startPositionOffset = dotSpacing / 2;
+
     for (let y = startPositionOffset; y < height; y += dotSpacing) {
       for (let x = startPositionOffset; x < width; x += dotSpacing) {
         tempDots.push({
           x,
           y,
-          scale: CONFIG.initialScale, // Default scale for all dots
+          scale: CONFIG.initialScale,
           dotSize,
         });
       }
     }
+
     setDots(tempDots);
-  }, [width, height, dotSize, dotSpacing]);
+  };
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const observer = new ResizeObserver(entries => {
+        for (let entry of entries) {
+          const {width, height} = entry.contentRect;
+          updateDots(width, height);
+        }
+      });
+
+      observer.observe(containerRef.current);
+
+      return () => observer.disconnect();
+    }
+  }, [dotSize, dotSpacing]);
 
   // Adjusts the scale of dots based on mouse or touch interaction for interactive mode.
   const handleInteraction = (x: number, y: number) => {
-    if (!interactive || influenceRadius === undefined) return;
+    if (!interactive || influenceRadius === undefined) {
+      return;
+    }
+
     const { initialScale, minScale } = CONFIG;
     const updatedDots = dots.map(dot => {
       const dx = dot.x - x;
@@ -53,6 +69,7 @@ const Dots: React.FC<DotsProps> = ({
       const distance = Math.sqrt(dx * dx + dy * dy);
       const distanceRatio = Math.min(distance / influenceRadius, 1); // Ensures the ratio does not exceed 1.
       const adjustedScale = distance < influenceRadius ? (minScale + (1 - minScale) * distanceRatio) : initialScale;
+
       return { ...dot, scale: adjustedScale };
     });
     setDots(updatedDots);
@@ -60,20 +77,28 @@ const Dots: React.FC<DotsProps> = ({
 
   // Mouse movement event handler for interactive mode.
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return;
+    if (!containerRef.current) {
+      return
+    }
+
     const boundingRect = containerRef.current.getBoundingClientRect();
     const mouseX = e.clientX - boundingRect.left;
     const mouseY = e.clientY - boundingRect.top;
+
     handleInteraction(mouseX, mouseY);
   };
 
   // Touch movement event handler for interactive mode.
   const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return;
+    if (!containerRef.current)  {
+      return;
+    }
+
     const touch = e.touches[0];
     const boundingRect = containerRef.current.getBoundingClientRect();
     const touchX = touch.clientX - boundingRect.left;
     const touchY = touch.clientY - boundingRect.top;
+
     handleInteraction(touchX, touchY);
   };
 
@@ -90,7 +115,6 @@ const Dots: React.FC<DotsProps> = ({
       onTouchMove={interactive ? handleTouchMove : undefined}
       onMouseLeave={interactive ? resetDotsScale : undefined}
       onTouchEnd={interactive ? resetDotsScale : undefined}
-      style={{ width: `${width}px`, height: `${height}px` }}
     >
       {dots.map((dot, index) => (
         <Dot key={index} {...dot} />

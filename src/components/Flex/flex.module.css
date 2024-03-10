@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.item {
+  --col-gap: 28px;
+  flex: 0 1 calc((100% / 12 * var(--cols)) - var(--col-gap));
+	margin: calc(var(--col-gap) / 2);
+}
+
+@media (max-width: 768px) {
+  .item {
+		/* Full width on small screens */
+    flex: 1 1 100%;
+  }
+
+  .hide {
+    display: none;
+  }
+}

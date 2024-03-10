@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Dots from './';
+import {Dots} from './';
 
 const meta = {
   title: 'Graphics/Dots',
@@ -18,18 +18,14 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     dotSize: 3,
-    width: 300,
-    height: 100,
-    dotSpacing: 16
+    dotSpacing: 14
   }
 };
 
 export const Interactive: Story = {
   args: {
     dotSize: 3,
-    width: 300,
-    height: 100,
-    dotSpacing: 16,
+    dotSpacing: 14,
     interactive: true,
     influenceRadius: 100
   }
