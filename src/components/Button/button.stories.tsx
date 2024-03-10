@@ -18,14 +18,14 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const ButtonExample: Story = {
+export const Default: Story = {
   args: {
     variant: 'action',
     text: 'Join the waitlist',
   },
 };
 
-export const LinkExample: Story = {
+export const Link: Story = {
   args: {
     text: 'View on GitHub',
     href: '#link'

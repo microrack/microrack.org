@@ -12,6 +12,9 @@
 
 /* Sizes */
 
+.xxs {
+  font-size: 10px;
+}
 .xs {
   font-size: 12px;
 }

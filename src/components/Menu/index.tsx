@@ -35,7 +35,7 @@ export const Menu = ({
               </Link>
               {
                 item.subtitle && (
-                  <Text className={styles.subtitle} size='xs' as="span" color='secondary'>
+                  <Text className={styles.subtitle} size='xxs' as="span" color='secondary'>
                     {item.subtitle}
                   </Text>
                 )
