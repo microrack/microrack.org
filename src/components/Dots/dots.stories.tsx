@@ -6,7 +6,7 @@ const meta = {
   title: 'Graphics/Dots',
   component: Dots,
   parameters: {
-    layout: 'padded',
+    layout: 'fullscreen',
   },
   tags: ['autodocs']
 } satisfies Meta<typeof Dots>;
@@ -16,5 +16,21 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {}
+  args: {
+    dotSize: 3,
+    width: 300,
+    height: 100,
+    dotSpacing: 16
+  }
+};
+
+export const interactive: Story = {
+  args: {
+    dotSize: 3,
+    width: 300,
+    height: 100,
+    dotSpacing: 16,
+    interactive: true,
+    influenceRadius: 100
+  }
 };
