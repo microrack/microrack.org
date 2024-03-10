@@ -24,7 +24,7 @@ export const Default: Story = {
   }
 };
 
-export const interactive: Story = {
+export const Interactive: Story = {
   args: {
     dotSize: 3,
     width: 300,

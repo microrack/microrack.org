@@ -23,9 +23,8 @@ export const Menu = ({
       {
         items.map((item: MenuItemProps, index) => {
           return (
-            <div>
+            <div key={index}>
               <Link
-                key={index}
                 href={item.href}
                 title={item.title}
                 target={item.external ? '_blank' : '_self'}
