@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useRef, useState, useEffect } from 'react';
 
 import Dot from '../Dot';
@@ -17,6 +19,7 @@ const CONFIG: Configuration = {
 export const Dots: React.FC<DotsProps> = ({
   dotSize,
   dotSpacing,
+  height = '100%',
   influenceRadius,
   interactive = false,
 }) => {
@@ -25,7 +28,7 @@ export const Dots: React.FC<DotsProps> = ({
 
   const updateDots = (width: number, height: number) => {
     const tempDots: Array<DotProps> = [];
-    const startPositionOffset = dotSpacing / 2;
+    const startPositionOffset = 0;
 
     for (let y = startPositionOffset; y < height; y += dotSpacing) {
       for (let x = startPositionOffset; x < width; x += dotSpacing) {
@@ -110,11 +113,12 @@ export const Dots: React.FC<DotsProps> = ({
   return (
     <div
       ref={containerRef}
-      className={styles.dotsContainer} // Ensure this class is defined in your CSS.
+      className={styles.dotsContainer}
       onMouseMove={interactive ? handleMouseMove : undefined}
       onTouchMove={interactive ? handleTouchMove : undefined}
       onMouseLeave={interactive ? resetDotsScale : undefined}
       onTouchEnd={interactive ? resetDotsScale : undefined}
+      style={{ height: height }}
     >
       {dots.map((dot, index) => (
         <Dot key={index} {...dot} />

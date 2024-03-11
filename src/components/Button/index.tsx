@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import classNames from 'classnames';
+import classnames from 'classnames';
 
 import { ButtonProps } from './button.types';
 import styles from "./button.module.css";
@@ -9,18 +9,19 @@ import styles from "./button.module.css";
  * Primary UI component for user interaction
  */
 export const Button = ({
+  className,
   variant = 'secondary',
   href,
   text,
   ...props
 }: ButtonProps) => {
-  const className = classNames(styles.button, styles[variant]);
+  const classNames = classnames(styles.button, styles[variant], className);
 
   return href
   ? (
     <Link
       href={href}
-      className={classNames(className, styles.link)}
+      className={classnames(classNames, styles.link)}
       {...props}
     >
       {text}
@@ -29,7 +30,7 @@ export const Button = ({
   : (
     <button
       type="button"
-      className={className}
+      className={classNames}
       {...props}
     >
       {text}

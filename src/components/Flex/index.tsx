@@ -4,9 +4,13 @@ import classnames from 'classnames';
 import type { ContainerProps, ItemProps } from './flex.types';
 import styles from './flex.module.css';
 
-export const Container: React.FC<ContainerProps> = ({ children }) => (
-  <div className={styles.container}>{children}</div>
-);
+export const Container: React.FC<ContainerProps> = ({ children, className }) => {
+	const classNames = classnames(styles.container, className);
+
+	return (
+		<div className={classNames}>{children}</div>
+	);
+}
 
 export const Item: React.FC<ItemProps> = ({ children, columns = 12, hideOnMobile = false }) => {
 	const className = classnames(styles.item, hideOnMobile ? styles.hide : '');

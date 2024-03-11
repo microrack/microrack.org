@@ -13,6 +13,8 @@ export type Configuration = {
 
 // Props for rendering static dots.
 export type StaticDotsProps = {
+  height?: string;
+
   /** Size of the dots. */
   dotSize: number;
 
