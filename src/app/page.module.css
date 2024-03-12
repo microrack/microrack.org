@@ -1,0 +1,26 @@
+.page {
+  display: flex;
+  padding: 0 14px;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.header {
+  margin: 0 auto 24px auto;
+}
+
+.main {
+  max-width: 1272px;
+  margin: auto;
+  width: 100%;
+  flex: 1;
+}
+
+.hero {
+	margin-bottom: 24px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}

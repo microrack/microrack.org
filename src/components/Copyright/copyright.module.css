@@ -1,0 +1,5 @@
+.copyright {
+	gap: 12px;
+	display: flex;
+	align-items: baseline;
+}

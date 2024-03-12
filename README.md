@@ -1,99 +1,53 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+# MICRORACK - The most accessible synthesizer
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+This is a MICRORACK.ORG website project, based on [Next.js](https://nextjs.org/) with React and CSS Modules.
 
-## 🚀 Quick start
+## Getting Started
 
-1.  **Create a Gatsby site.**
+### Environment Setup
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
+1. **Install Node.js**: Ensure Node.js is installed on your system. This project requires Node.js 20.x or later.
+2. **Clone the Repository**: Clone this project to your local machine.
+   ```bash
+   git clone <repository-url>
+   ```
+3. **Install Dependencies**: Navigate to the project directory and install its dependencies.
+   ```bash
+   npm install
+   ```
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+### Run and Preview the Project
 
-1.  **Start developing.**
+- **Development Server**:
+  Start the development server to preview the project locally.
+  ```bash
+  npm run dev
+  ```
+  Open [http://localhost:3000](http://localhost:3000) in your browser to see the project live. The development server supports hot reloading; changes you make in the code will automatically refresh in the browser.
 
-    Navigate into your new site’s directory and start it up.
+- **Editing**: To modify the project, edit the files within the `pages` directory. For example, `pages/index.js` is a good starting point.
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+### Deployment
 
-1.  **Open the source code and start editing!**
+- **Preparation**: Ensure all changes are committed, including any version bumps or final adjustments needed for deployment.
+- **Deploy Command**: Run the deployment command to lint, test successful build of your project and push all changes for deployment.
+  ```bash
+  npm run deploy
+  ```
+  This command handles the build process and pushes everything the appropriate branch, triggering the configured GitHub Actions workflow for deployment.
 
-    Your site is now running at `http://localhost:8000`!
+## Learn More
 
-    Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
+For a deeper dive into Next.js features and API, the following resources are highly recommended:
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+- [Next.js Documentation](https://nextjs.org/docs) - Comprehensive guides and the API reference.
+- [Learn Next.js](https://nextjs.org/learn) - An interactive tutorial for beginners and advanced users alike.
 
-## 🚀 Quick start (Netlify)
+## Contributing
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+Contributions are always welcome! Please refer to the project's issue tracker or discussion board for areas where you can help. Ensure to follow the project's contribution guidelines.
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+## Feedback and Support
 
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a typical Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package.json
-    └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-1.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-1.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
-
-1.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-1.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-1.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-1.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-1.  **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/getting-started/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On Netlify](https://netlify.com)
-
-The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. And also the best place to build, deploy, and host your Gatsby sites.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+For feedback or support, please create an issue in the GitHub repository. Your input helps make this project better for everyone.

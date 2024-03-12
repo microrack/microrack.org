@@ -1,0 +1,17 @@
+[
+	{
+		"title": "Home",
+		"href": "/"
+	},
+	{
+		"title": "Press",
+		"href": "/press",
+		"hideOnMobile": true,
+		"subtitle": "soon"
+	},
+	{
+		"title": "Github",
+		"href": "http://www.github.com",
+		"external": true
+	}
+]

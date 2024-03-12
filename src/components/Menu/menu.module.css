@@ -1,0 +1,30 @@
+.menu {
+  gap: 3vw;
+  display: flex;
+  margin-right: 2vw;
+  justify-content:space-between;
+}
+
+.menuItem {
+  position: relative;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+}
+
+.subtitle {
+  display: block;
+  position: absolute;
+}
+
+.wide {
+  gap: 5vw;
+}
+
+@media (max-width: 768px) {
+  .hide {
+    display: none;
+  }
+}
