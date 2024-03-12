@@ -30,8 +30,7 @@ export const Dots: React.FC<DotsProps> = ({
   const [dots, setDots] = useState<Array<DotProps>>([]);
 
   const updateDots = useCallback((width: number, height: number) => {
-    (width: number, height: number) => {
-      const tempDots: Array<DotProps> = [];
+    const tempDots: Array<DotProps> = [];
       const startPositionOffset = 0;
   
       for (let y = startPositionOffset; y < height; y += dotSpacing) {
@@ -45,8 +44,7 @@ export const Dots: React.FC<DotsProps> = ({
         }
       }
   
-      setDots(tempDots);
-    }
+    setDots(tempDots);
   }, [dotSize, dotSpacing]);
 
   useEffect(() => {
