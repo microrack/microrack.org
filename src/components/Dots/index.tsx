@@ -23,6 +23,9 @@ export const Dots: React.FC<DotsProps> = ({
   influenceRadius,
   interactive = false,
 }) => {
+
+  console.log('Dots start');
+
   const containerRef = useRef<HTMLDivElement>(null);
   const [dots, setDots] = useState<Array<DotProps>>([]);
 
@@ -47,6 +50,8 @@ export const Dots: React.FC<DotsProps> = ({
   }, [dotSize, dotSpacing]);
 
   useEffect(() => {
+    console.log('Dots useEffect start');
+
     if (containerRef.current) {
       const observer = new ResizeObserver(entries => {
         for (let entry of entries) {
@@ -57,12 +62,16 @@ export const Dots: React.FC<DotsProps> = ({
 
       observer.observe(containerRef.current);
 
+      console.log('Dots useEffect end');
+
       return () => observer.disconnect();
     }
   }, [dotSize, dotSpacing, updateDots]);
 
   // Adjusts the scale of dots based on mouse or touch interaction for interactive mode.
   const handleInteraction = (x: number, y: number) => {
+    console.log('Dots handleInteraction start');
+  
     if (!interactive || influenceRadius === undefined) {
       return;
     }
@@ -111,6 +120,8 @@ export const Dots: React.FC<DotsProps> = ({
   const resetDotsScale = () => {
     setDots(dots.map(dot => ({ ...dot, scale: CONFIG.initialScale })));
   };
+
+  console.log('Dots end');
 
   return (
     <div
