@@ -14,7 +14,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.container}>
           <Hero className={styles.hero}/>
-          <Benefits />
+          <Benefits className={styles.benefits}/>
         </div>
       </main>
       <Footer />

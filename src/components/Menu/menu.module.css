@@ -5,6 +5,10 @@
   justify-content:space-between;
 }
 
+.menuItem {
+  position: relative;
+}
+
 .menu a {
   color: black;
   text-decoration: none;
@@ -17,4 +21,10 @@
 
 .wide {
   gap: 5vw;
+}
+
+@media (max-width: 768px) {
+  .hide {
+    display: none;
+  }
 }

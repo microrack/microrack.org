@@ -17,13 +17,16 @@ export const Menu = ({
   items
 }: MenuProps): JSX.Element => {
   const classNames = classnames(styles.menu, wide ? styles.wide : '');
+  
 
   return (
     <nav className={classNames}>
       {
         items.map((item: MenuItemProps, index) => {
+          const itemClassNames = classnames(styles.menuItem, item.hideOnMobile ? styles.hide : '');
+      
           return (
-            <div key={index}>
+            <div key={index} className={itemClassNames}>
               <Link
                 href={item.href}
                 title={item.title}

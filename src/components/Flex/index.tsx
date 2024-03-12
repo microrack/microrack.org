@@ -12,12 +12,12 @@ export const Container: React.FC<ContainerProps> = ({ children, className }) => 
 	);
 }
 
-export const Item: React.FC<ItemProps> = ({ children, columns = 12, hideOnMobile = false }) => {
-	const className = classnames(styles.item, hideOnMobile ? styles.hide : '');
+export const Item: React.FC<ItemProps> = ({ className, children, columns = 12, hideOnMobile = false }) => {
+	const classNames = classnames(className, styles.item, hideOnMobile ? styles.hide : '');
 
 	return (
 		<div
-			className={className}
+			className={classNames}
 			style={{ '--cols': columns } as React.CSSProperties}
 		>
 			{children}

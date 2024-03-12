@@ -3,6 +3,7 @@ export type MenuItemProps = {
   external?: boolean;
   title: string;
   href: string;
+  hideOnMobile?: boolean;
 };
 
 export type MenuProps = {

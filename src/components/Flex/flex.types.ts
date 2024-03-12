@@ -5,6 +5,7 @@ export type ContainerProps = {
 
 export type ItemProps = {
   columns?: number;
+  className?: string;
   children: React.ReactNode;
   hideOnMobile?: boolean;
 };

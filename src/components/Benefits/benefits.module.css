@@ -7,3 +7,10 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
+@media (max-width: 768px) {
+  .benefits {
+    scale: 1.1;
+    gap: 14px;
+  }
+}

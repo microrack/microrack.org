@@ -1,1 +1,3 @@
-export type BenefitsProps = {};
+export type BenefitsProps = {
+	className?: string;
+};
