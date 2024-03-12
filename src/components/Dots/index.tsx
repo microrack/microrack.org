@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 
 import Dot from '../Dot';
 import type {DotProps} from '../Dot/dot.types';
@@ -26,23 +26,25 @@ export const Dots: React.FC<DotsProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const [dots, setDots] = useState<Array<DotProps>>([]);
 
-  const updateDots = (width: number, height: number) => {
-    const tempDots: Array<DotProps> = [];
-    const startPositionOffset = 0;
-
-    for (let y = startPositionOffset; y < height; y += dotSpacing) {
-      for (let x = startPositionOffset; x < width; x += dotSpacing) {
-        tempDots.push({
-          x,
-          y,
-          scale: CONFIG.initialScale,
-          dotSize,
-        });
+  const updateDots = useCallback((width: number, height: number) => {
+    (width: number, height: number) => {
+      const tempDots: Array<DotProps> = [];
+      const startPositionOffset = 0;
+  
+      for (let y = startPositionOffset; y < height; y += dotSpacing) {
+        for (let x = startPositionOffset; x < width; x += dotSpacing) {
+          tempDots.push({
+            x,
+            y,
+            scale: CONFIG.initialScale,
+            dotSize,
+          });
+        }
       }
+  
+      setDots(tempDots);
     }
-
-    setDots(tempDots);
-  };
+  }, [dotSize, dotSpacing]);
 
   useEffect(() => {
     if (containerRef.current) {
