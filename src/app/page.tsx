@@ -13,7 +13,7 @@ export default function Home() {
       <Header className={styles.header} />
       <main className={styles.main}>
         <div className={styles.container}>
-          <Hero />
+          <Hero className={styles.hero}/>
           <Benefits />
         </div>
       </main>
