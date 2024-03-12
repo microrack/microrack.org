@@ -57,7 +57,7 @@ export const Dots: React.FC<DotsProps> = ({
 
       return () => observer.disconnect();
     }
-  }, [dotSize, dotSpacing]);
+  }, [dotSize, dotSpacing, updateDots]);
 
   // Adjusts the scale of dots based on mouse or touch interaction for interactive mode.
   const handleInteraction = (x: number, y: number) => {
