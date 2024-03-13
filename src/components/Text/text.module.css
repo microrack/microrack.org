@@ -26,6 +26,10 @@
   font-size: 16px;
 }
 
+.ml {
+  font-size: 18px;
+}
+
 .l {
   font-size: 20px;
 }
@@ -40,6 +44,36 @@
 
 .xxxl {
   font-size: 46px;
+}
+
+@media (max-width: 768px) {
+  .xxs {
+    font-size: 12px;
+  }
+  .xs {
+    font-size: 14px;
+  }
+  .s {
+    font-size: 16px;
+  }
+  .m {
+    font-size: 18px;
+  }
+  .ml {
+    font-size: 20px;
+  }
+  .l {
+    font-size: 24px;
+  }
+  .xl {
+    font-size: 28px;
+  }
+  .xxl {
+    font-size: 32px;
+  }
+  .xxxl {
+    font-size: 48px;
+  }
 }
 
 /* Weights */

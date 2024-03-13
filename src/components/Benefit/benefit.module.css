@@ -1,8 +1,14 @@
 .benefit {
   flex-grow: 1;
-  max-width: 300px;
+  max-width: 270px;
 }
 
 .heading {
   margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .benefit {
+    max-width: 350px;
+  }
 }

@@ -17,8 +17,8 @@ export const Benefit = ({
 
   return (
     <div className={styles.benefit}>
-      <Text className={styles.heading} as='h1' size='m' uppercase={true} weight='bold' color="purple">{title}</Text>
-      <Text as='p'size='xs'>{description}</Text>
+      <Text className={styles.heading} as='h1' size='ml' uppercase={true} weight='bold' color="purple">{title}</Text>
+      <Text as='p'size='s'>{description}</Text>
     </div>
   );
 }

@@ -1,6 +1,4 @@
-"use client";
-
-import React, {useRef, useEffect} from "react";
+import React from "react";
 import classnames from "classnames";
 
 import Image from "next/image";
@@ -19,74 +17,44 @@ export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
 	const dotSize = 4;
 	const dotSpacing = 15;
 
-  let imageWidth = 400;
-  let imageHeight = 400;
-
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-
-    if (containerRef.current) {
-      const observer = new ResizeObserver(entries => {
-        for (let entry of entries) {
-          const {width, height} = entry.contentRect;
-
-          imageWidth = width;
-          imageHeight = height;
-        }
-      });
-
-      observer.observe(containerRef.current);
-
-
-      return () => observer.disconnect();
-    }
-  }, [imageWidth, imageHeight]);
-
 	return (
-		<section className={classnames(styles.hero, className)}>
-			<Container>
-          <Item columns={1} hideOnMobile>
-            <Dots dotSize={dotSize} dotSpacing={dotSpacing} />
-          </Item>
-          <Item columns={2} hideOnMobile>
-            <Dots dotSize={dotSize} dotSpacing={dotSpacing} />
-          </Item>
+    <Container className={classnames(styles.container, className)}>
+      <Item columns={1} hideOnMobile hideOnTablet>
+        <Dots dotSize={dotSize} dotSpacing={dotSpacing} />
+      </Item>
+      <Item columns={2} hideOnMobile>
+        <Dots dotSize={dotSize} dotSpacing={dotSpacing} />
+      </Item>
 
 
+      <Item columns={3} className={styles.content}>
+        <Dots dotSize={dotSize} dotSpacing={dotSpacing} height=""/>
+        <Text size="m" className={styles.description}>
+          Accessible modular analog synthesizer.<br /> <br />Combine dozens of modules, play unique instruments, experiment and have fun!
+        </Text>
+        <Text size="ml" uppercase weight="bold" className={styles.slogan}>
+          The sound is all yours
+        </Text>
+        <Button
+          className={styles.button}
+          href="https://forms.gle/CgNbhLSbxbahZK8BA"
+          variant="action"
+          text="Join the waitlist"
+        />
+        <Dots dotSize={dotSize} dotSpacing={dotSpacing} height=""/>
+      </Item>
 
 
-          <Item columns={3} className={styles.content}>
-            <Dots dotSize={dotSize} dotSpacing={dotSpacing} height=""/>
-            <Text size="m" className={styles.description}>
-              Accessible modular analog synthesizer.<br /> <br />Combine dozens of modules, play unique instruments, experiment and have fun!
-            </Text>
-            <Text size="l" uppercase weight="bold" className={styles.slogan}>
-              The sound is all yours
-            </Text>
-            <Button
-              className={styles.button}
-              href="https://forms.gle/CgNbhLSbxbahZK8BA"
-              variant="action"
-              text="Join the waitlist"
-            />
-            <Dots dotSize={dotSize} dotSpacing={dotSpacing} height=""/>
-          </Item>
-
-
-
-
-          <Item columns={1} hideOnMobile>
-            <Dots dotSize={dotSize} dotSpacing={dotSpacing} />
-          </Item>
-          <Item containerRef={containerRef} columns={4} className={styles.image}>
-            <Image src={image} alt="MicroRack" height={imageHeight} width={imageWidth}/>
-            {/* <Dots dotSize={dotSize} dotSpacing={dotSpacing} /> */}
-          </Item>
-          <Item columns={1}>
-            <Dots dotSize={dotSize} dotSpacing={dotSpacing} />
-          </Item>
-        </Container>
-		</section>
+      <Item columns={1} hideOnMobile>
+        <Dots dotSize={dotSize} dotSpacing={dotSpacing} />
+      </Item>
+      <Item columns={4} className={styles.imageItem}>
+        <Image src={image} alt="MicroRack" fill={true} className={styles.imageComponent} />
+        {/* <Dots dotSize={dotSize} dotSpacing={dotSpacing} /> */}
+      </Item>
+      <Item columns={1}>
+        <Dots dotSize={dotSize} dotSpacing={dotSpacing} />
+      </Item>
+    </Container>
 	);
 }

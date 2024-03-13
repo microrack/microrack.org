@@ -8,16 +8,20 @@ export const Container: React.FC<ContainerProps> = ({ children, className }) => 
 	const classNames = classnames(styles.container, className);
 
 	return (
-		<div className={classNames}>{children}</div>
+		<section className={classNames}>{children}</section>
 	);
 }
 
-export const Item: React.FC<ItemProps> = ({ containerRef, className, children, columns = 12, hideOnMobile = false }) => {
-	const classNames = classnames(className, styles.item, hideOnMobile ? styles.hide : '');
+export const Item: React.FC<ItemProps> = ({ className, children, columns = 12, hideOnMobile = false, hideOnTablet = false }) => {
+	const classNames = classnames(
+		className,
+		styles.item,
+		hideOnMobile ? styles.hideOnMobile : '',
+		hideOnTablet ? styles.hideOnTablet : ''
+	);
 
 	return (
 		<div
-			ref={containerRef}
 			className={classNames}
 			style={{ '--cols': columns } as React.CSSProperties}
 		>

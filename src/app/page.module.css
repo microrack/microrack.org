@@ -10,17 +10,20 @@
 }
 
 .main {
+  flex-direction: column;
   max-width: 1272px;
+  display: flex;
   margin: auto;
   width: 100%;
   flex: 1;
 }
 
-.hero {
-	margin-bottom: 24px;
+.hero, .benefit {
+  margin-bottom: 24px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
+@media (max-width: 768px) {
+  .main {
+    gap: 34px;
+  }
 }

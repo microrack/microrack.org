@@ -7,7 +7,6 @@
 }
 
 .item {
-	/* Adjust 16px for gap */
   flex: 0 1 calc((100% / 12 * var(--cols)) - 28px);
 }
 
@@ -17,7 +16,13 @@
     flex: 1 1 100%;
   }
 
-  .hide {
+  .hideOnMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hideOnTablet {
     display: none;
   }
 }

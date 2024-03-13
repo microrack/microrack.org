@@ -15,7 +15,7 @@ export type TextProps = {
   /**
    * Text size and line height
    */
-  size?: 'xxxl' | 'xxl' | 'xl' | 'l' | 'm' | 's' | 'xs' | 'xxs';
+  size?: 'xxxl' | 'xxl' | 'xl' | 'l' | 'ml' | 'm' | 's' | 'xs' | 'xxs';
   /**
    * Text weight
    */

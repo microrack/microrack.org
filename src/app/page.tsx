@@ -12,10 +12,8 @@ export default function Home() {
     <div className={styles.page}>
       <Header className={styles.header} />
       <main className={styles.main}>
-        <div className={styles.container}>
-          <Hero className={styles.hero}/>
-          <Benefits className={styles.benefits}/>
-        </div>
+        <Hero className={styles.hero}/>
+        <Benefits className={styles.benefits}/>
       </main>
       <Footer />
     </div>
