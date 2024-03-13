@@ -2,7 +2,7 @@ import { Martian_Mono } from "next/font/google";
 
 import "./globals.css";
 
-const martian = Martian_Mono({ weight: 'variable' });
+const martian = Martian_Mono({ subsets: ["latin"], weight: 'variable' });
 
 export { metadata } from "./metadata";
 
