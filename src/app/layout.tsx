@@ -1,8 +1,4 @@
-import { Martian_Mono } from "next/font/google";
-
 import "./globals.css";
-
-const martian = Martian_Mono({ subsets: ["latin"], weight: 'variable' });
 
 export { metadata } from "./metadata";
 
@@ -13,7 +9,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{height: '100%'}}>
-      <body className={martian.className} style={{height: '100%'}}>{children}</body>
+      <body style={{height: '100%'}}>{children}</body>
     </html>
   );
 }
