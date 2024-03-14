@@ -1,3 +1,5 @@
+import {TextProps} from '../Text/text.types';
+
 export type MenuItemProps = {
   subtitle?: string;
   external?: boolean;
@@ -7,7 +9,9 @@ export type MenuItemProps = {
 };
 
 export type MenuProps = {
+  className?: string;
   wide?: boolean;
   uppercase?: boolean;
   items: MenuItemProps[];
+  headingColor?: TextProps['color'];
 };

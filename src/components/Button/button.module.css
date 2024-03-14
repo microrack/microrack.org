@@ -6,6 +6,8 @@
   padding: 12px 24px 12px 24px;
   border-radius: 3px;
   border: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .primary {

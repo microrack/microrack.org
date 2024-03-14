@@ -22,6 +22,11 @@
   margin-bottom: 24px;
 }
 
+.slogan {
+  width: 100%;
+  text-align: justify;
+}
+
 @media (max-width: 768px) {
   .main {
     gap: 34px;

@@ -13,7 +13,7 @@ export const Footer = (): JSX.Element => {
   return (
     <footer className={styles.footer}>
       <Copyright />
-      <Menu items={items}/>
+      <Menu className={styles.menu} items={items} headingColor="purple"/>
     </footer>
   );
 };

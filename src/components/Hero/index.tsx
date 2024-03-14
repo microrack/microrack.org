@@ -29,11 +29,11 @@ export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
 
       <Item columns={3} className={styles.content}>
         <Dots dotSize={dotSize} dotSpacing={dotSpacing} height=""/>
-        <Text size="m" className={styles.description}>
-          Accessible modular analog synthesizer.<br /> <br />Combine dozens of modules, play unique instruments, experiment and have fun!
+        <Text as="h1" weight="bold" size="xl" className={styles.description}>
+          Most accessible analog modular synthesizer
         </Text>
-        <Text size="ml" uppercase weight="bold" className={styles.slogan}>
-          The sound is all yours
+        <Text size="m" className={styles.description}>
+          Combine dozens of modules, play unique instruments, experiment and have fun!
         </Text>
         <Button
           className={styles.button}
@@ -41,6 +41,7 @@ export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
           variant="action"
           text="Join the waitlist"
         />
+        
         <Dots dotSize={dotSize} dotSpacing={dotSpacing} height=""/>
       </Item>
 

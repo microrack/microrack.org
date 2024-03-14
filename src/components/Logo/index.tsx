@@ -19,7 +19,7 @@ export const Logo = (props: LogoProps) => {
 	return (
 		<Link href="/" className={className}>
 			<Image src={logo} height="20" alt="mR" />
-			<Text as="span" uppercase size="xl">MicroRack</Text>
+			<Text as="span" uppercase size="xl">MicroRack™</Text>
 		</Link>
 	);
 }

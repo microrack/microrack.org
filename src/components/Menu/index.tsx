@@ -12,11 +12,13 @@ import styles from "./menu.module.css";
  * Menu navigation component
  */
 export const Menu = ({
+  className,
+  headingColor = "primary",
   uppercase = false,
   wide = false,
   items
 }: MenuProps): JSX.Element => {
-  const classNames = classnames(styles.menu, wide ? styles.wide : '');
+  const classNames = classnames(className, styles.menu, wide ? styles.wide : '');
   
 
   return (
@@ -32,7 +34,7 @@ export const Menu = ({
                 title={item.title}
                 target={item.external ? '_blank' : '_self'}
               >
-                <Text size='s' as="span" uppercase={uppercase}>
+                <Text size='s' as="span" uppercase={uppercase} color={headingColor}>
                   {item.title}
                 </Text>
               </Link>

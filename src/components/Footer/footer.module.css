@@ -19,6 +19,11 @@
     margin-top: 24px;
     border-top: 1px solid #232525;
     flex-direction: column-reverse;
-    gap: 14px;
+    gap: 24px;
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: space-evenly;
   }
 }
