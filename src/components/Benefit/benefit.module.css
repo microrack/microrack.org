@@ -9,6 +9,6 @@
 
 @media (max-width: 768px) {
   .benefit {
-    max-width: 350px;
+    max-width: none;
   }
 }
