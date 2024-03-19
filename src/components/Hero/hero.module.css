@@ -21,7 +21,7 @@
 
 .imageComponent {
 	object-fit: cover;
-	position: relative;
+	filter: hue-rotate(45deg);
 }
 
 @media (max-width: 768px) {
