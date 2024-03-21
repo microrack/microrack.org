@@ -11,7 +11,7 @@ import { Container, Item } from "../Flex";
 import styles from "./hero.module.css";
 
 import {HeroProps} from './hero.types'
-import image from "./assets/hero.gif";
+import image from "./assets/cover-1.jpg";
 
 export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
 	const dotSize = 4;
