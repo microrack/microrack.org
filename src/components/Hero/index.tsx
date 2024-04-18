@@ -33,7 +33,7 @@ export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
           Most accessible analog modular synthesizer
         </Text>
         <Text size="m" className={styles.description}>
-          Combine dozens of modules, play unique instruments, experiment and have fun!
+          Combine dozens of modules, build unique instruments, experiment with sound and have fun!
         </Text>
         <Button
           className={styles.button}
