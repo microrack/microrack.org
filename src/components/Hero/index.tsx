@@ -30,7 +30,7 @@ export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
       <Item columns={3} className={styles.content}>
         <Dots dotSize={dotSize} dotSpacing={dotSpacing} height=""/>
         <Text as="h1" weight="bold" size="xl" className={styles.description}>
-          Most accessible analog modular synthesizer
+          The most accessible modular synthesizer
         </Text>
         <Text size="m" className={styles.description}>
           Combine dozens of modules, build unique instruments, experiment with sound and have fun!
