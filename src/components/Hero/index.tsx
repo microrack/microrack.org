@@ -43,8 +43,6 @@ export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
           dotSpacing={dotSpacing}
         />
       </Item>
-
-
       <Item
         columns={3}
         className={styles.content}
@@ -81,8 +79,6 @@ export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
           dotSpacing={dotSpacing}
         />
       </Item>
-
-
       <Item
         columns={1}
         hideOnMobile
