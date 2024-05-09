@@ -72,7 +72,6 @@ export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
           text={texts.heroButton}
           className={styles.button}
         />
-        
         <Dots
           height=""
           dotSize={dotSize}
