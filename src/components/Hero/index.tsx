@@ -15,6 +15,7 @@ import image from "./assets/cover-1.jpg";
 import texts from "./text.json";
 
 const OPT_IN_URL = "https://forms.gle/CgNbhLSbxbahZK8BA";
+const INST_URL = "https://instagram.com/microrack.synth";
 
 export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
 	const dotSize = 4;
@@ -69,11 +70,17 @@ export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
         <Button
           variant="action"
           href={OPT_IN_URL}
-          text={texts.heroButton}
+          text={texts.listButton}
+          className={styles.button}
+        />
+        <Button
+          variant="promo"
+          href={INST_URL}
+          text={texts.instButton}
           className={styles.button}
         />
         <Dots
-          height=""
+          height="10px"
           dotSize={dotSize}
           dotSpacing={dotSpacing}
         />
