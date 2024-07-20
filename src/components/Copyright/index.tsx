@@ -18,8 +18,8 @@ export const Copyright = (props: CopyrightProps) => {
 			<Text as="span" uppercase size="m">©</Text>
 			<Text as="span" uppercase size="m">MicroRack</Text>
 			<>
-				<Text as="span" uppercase size="m">2019</Text>
-				<Text as="span" uppercase size="m">&ndash;&nbsp;{currentYear}</Text>
+				{/* <Text as="span" uppercase size="m">2019</Text> */}
+				<Text as="span" uppercase size="m">{currentYear}</Text>
 			</>
 		</div>
 	);

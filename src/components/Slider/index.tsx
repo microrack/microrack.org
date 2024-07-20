@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useRef, TouchEvent } from 'react';
+'use client';
+
+import React, { useState, useCallback, useEffect, useRef, TouchEvent } from 'react';
 import classNames from 'classnames';
 import styles from './slider.module.css';
 
@@ -14,9 +16,9 @@ export const Slider: React.FC<SliderProps> = ({ children, autoPlayInterval = 650
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % children.length);
-  };
+  }, [children.length]);
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + children.length) % children.length);
