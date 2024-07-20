@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import classnames from "classnames";
 
@@ -7,11 +9,14 @@ import { Dots } from "../Dots";
 import { Text } from "../Text";
 import { Button } from "../Button";
 import { Container, Item } from "../Flex";
+import { Slider } from "@/components/Slider";
 
 import styles from "./hero.module.css";
 
 import {HeroProps} from './hero.types'
-import image from "./assets/cover-1.jpg";
+import img1 from "./assets/cover-1.jpg";
+import img2 from "./assets/hero.jpg";
+import img0 from "./assets/hero.gif";
 import texts from "./text.json";
 
 const OPT_IN_URL = "https://forms.gle/CgNbhLSbxbahZK8BA";
@@ -20,6 +25,27 @@ const INST_URL = "https://instagram.com/microrack.synth";
 export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
 	const dotSize = 4;
 	const dotSpacing = 15;
+
+  const images = [
+    <Image
+      fill={true}
+      src={img0}
+      className={styles.imageComponent}
+      alt={texts.imgAlt}
+    />,
+    <Image
+      fill={true}
+      src={img1}
+      className={styles.imageComponent}
+      alt={texts.imgAlt}
+    />,
+    <Image
+      fill={true}
+      src={img2}
+      className={styles.imageComponent}
+      alt={texts.imgAlt}
+    />
+  ];
 
 	return (
     <Container className={
@@ -98,12 +124,7 @@ export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
         columns={4}
         className={styles.imageItem}
       >
-        <Image
-          fill={true}
-          src={image}
-          className={styles.imageComponent}
-          alt={texts.imgAlt}
-        />
+        <Slider children={images} />
         {/* <Dots dotSize={dotSize} dotSpacing={dotSpacing} /> */}
       </Item>
       <Item columns={1}>

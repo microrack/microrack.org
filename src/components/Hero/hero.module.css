@@ -19,7 +19,7 @@
 }
 
 .imageComponent {
-	object-fit: cover;
+	object-fit: contain;
 	filter: brightness(1.05);
 }
 
@@ -34,10 +34,6 @@
 
 	.button {
 		align-self: center;
-	}
-
-	.content {
-		text-align: center;
 	}
 }
 
