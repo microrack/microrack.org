@@ -15,10 +15,10 @@ import { Separator } from "@/components/Separator";
 import styles from "./page.module.css";
 import faqData from "./faq.json";
 
-import img1 from "@/app/assets/cover-1.jpg";
-import img2 from "@/app/assets/hero.jpg";
-import img0 from "@/app/assets/hero.gif";
-import cover from "@/app/assets/asortment.jpg";
+import img1 from "./assets/cover-1.jpg";
+import img2 from "./assets/hero.jpg";
+import img0 from "./assets/hero.gif";
+import cover from "./assets/asortment.jpg";
 
 import texts from "./texts.json";
 
