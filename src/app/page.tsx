@@ -22,7 +22,7 @@ export default function Home() {
         <Benefits className={styles.benefits}/>
         <Separator type="triangle" className={styles.separator} />
         <About className={styles.about} />
-        <Timeline className={styles.timeline}/>
+        {/* <Timeline className={styles.timeline}/> */}
         <Separator type="saw" className={styles.separator}/>
         <FAQ className={styles.faq} faqData={faqData}  />
       </main>
