@@ -31,12 +31,18 @@ const Item: React.FC<{ item: FAQItem }> = ({ item }) => {
   );
 };
 
-export const FAQ: React.FC<FAQProps> = ({faqData}) => {
+export const FAQ: React.FC<FAQProps> = ({className, faqData}) => {
   return (
-    <div className={styles.faqContainer}>
-      {faqData.map((item, index) => (
-        <Item key={index} item={item} />
-      ))}
-    </div>
+    <section className={className} id="faq">
+      <Text uppercase size="l" weight="bold" className={styles.title}>
+        FAQ
+      </Text>
+      <div className={styles.faqContainer}>
+        {faqData.map((item, index) => (
+          <Item key={index} item={item} />
+        ))}
+      </div>
+    </section>
+    
   );
 };

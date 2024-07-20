@@ -16,6 +16,10 @@
     "answer": "MICRORACK is versatile, supporting 5-14V via DC barrel jack or 5/9/12V via USB Type-C. It can be powered by a standard power supply, laptop, or even a power bank for portable use."
   },
   {
+    "question": "What makes MICRORACK different from other modular systems?",
+    "answer": "MICRORACK stands out with its accessibility, affordability, and compact design. It's a complete analog system that's portable, easy to learn, and compatible with other gear. Our open-source approach and community focus also set us apart in the modular synthesis world."
+  },
+  {
     "question": "Are all MICRORACK modules analog?",
     "answer": "Most MICRORACK modules are analog, with a few exceptions like the PT2399-based digital delay and the counter chip in the sequencer. We also offer a digital ESP32-based Developer module for advanced features like MIDI-CV conversion, oscilloscope functionality, and more."
   },
@@ -32,10 +36,6 @@
     "answer": "Absolutely! We encourage DIY module creation. After our Kickstarter campaign, we'll release open-source schematics and design files. You can prototype your own modules right on the breadboard alongside official MICRORACK modules."
   },
   {
-    "question": "How portable is MICRORACK?",
-    "answer": "MICRORACK is highly portable. Its compact design and USB-C power compatibility mean you can easily pack it in a bag and take it anywhere. Use a power bank to enjoy modular synthesis on the go - it's like having a portable rave!"
-  },
-  {
     "question": "What modules are included with MICRORACK?",
     "answer": "MICRORACK offers a wide range of modules including VCOs, filters, envelope generators, LFOs, sequencers, and more. Our kits come with a variety of modules to get you started. We're constantly developing new modules to expand the MICRORACK ecosystem."
   },
@@ -48,15 +48,11 @@
     "answer": "Join our forum to share module designs, provide feedback, and collaborate on projects. You can also contribute by developing open-source modules or collaborating with us on branded modules. We welcome and encourage community involvement!"
   },
   {
-    "question": "Will MICRORACK be available internationally?",
-    "answer": "We're working on making MICRORACK available worldwide. Stay tuned for updates on international shipping and availability. We're committed to making MICRORACK accessible to synthesizer enthusiasts globally."
-  },
-  {
     "question": "How can I stay updated on MICRORACK developments?",
     "answer": "Follow us on social media, join our mailing list, and participate in our forum. We regularly share updates about new modules, features, and community projects."
   },
   {
-    "question": "What makes MICRORACK different from other modular systems?",
-    "answer": "MICRORACK stands out with its accessibility, affordability, and compact design. It's a complete analog system that's portable, easy to learn, and compatible with other gear. Our open-source approach and community focus also set us apart in the modular synthesis world."
+    "question": "Will MICRORACK be available internationally?",
+    "answer": "We're working on making MICRORACK available worldwide. We're committed to making MICRORACK accessible to synthesizer enthusiasts globally."
   }
 ]

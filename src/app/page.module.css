@@ -18,13 +18,12 @@
   flex: 1;
 }
 
-.hero, .benefit {
-  margin-bottom: 24px;
+.hero, .benefits, .about, .timeline, .faq {
+  margin-bottom: 36px;
 }
 
-.slogan {
-  width: 100%;
-  text-align: justify;
+.separator {
+  margin-bottom: 42px;
 }
 
 @media (max-width: 768px) {

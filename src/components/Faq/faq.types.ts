@@ -6,5 +6,6 @@ export type FAQItem = {
 export type FAQData = FAQItem[];
 
 export type FAQProps = {
+  className?: string;
   faqData: FAQData;
 };

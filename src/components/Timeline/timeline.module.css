@@ -1,0 +1,12 @@
+.title {
+  margin-bottom: 32px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.point {
+  margin: 18px 0;
+}

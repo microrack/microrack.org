@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Menu } from '../Menu';
-import { Copyright } from '../Copyright';
+import { Menu } from '@/components/Menu';
+import { Separator } from '@/components/Separator';
+import { Copyright } from '@/components/Copyright';
 
 import styles from "./footer.module.css";
 import items from './footer.menu-items.json';
@@ -12,8 +13,11 @@ import items from './footer.menu-items.json';
 export const Footer = (): JSX.Element => {
   return (
     <footer className={styles.footer}>
-      <Copyright />
-      <Menu className={styles.menu} items={items} headingColor="purple" wide />
+      <Separator type="square" />
+      <div className={styles.container}>
+        <Copyright />
+        <Menu className={styles.menu} items={items} headingColor="purple" wide />
+      </div>
     </footer>
   );
 };

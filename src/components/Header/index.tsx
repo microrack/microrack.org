@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
 import classnames from 'classnames';
+import React, { useState } from 'react';
 
-import { Logo } from '../Logo';
-import { Menu } from '../Menu';
+import { Logo } from '@/components/Logo';
+import { Menu } from '@/components/Menu';
+import { Separator } from '@/components/Separator';
 
 import { HeaderProps } from "./header.types";
 import styles from "./header.module.css";
@@ -29,6 +30,7 @@ export const Header = ({ className }: HeaderProps): JSX.Element => {
         </div>
         <Menu uppercase items={items} isOpen={isMenuOpen} />
       </div>
+      <Separator type="sin" />
     </header>
   );
 };
