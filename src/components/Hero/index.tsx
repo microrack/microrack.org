@@ -28,18 +28,21 @@ export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
 
   const images = [
     <Image
+      key='0'
       fill={true}
       src={img0}
       className={styles.imageComponent}
       alt={texts.imgAlt}
     />,
     <Image
+      key='1'
       fill={true}
       src={img1}
       className={styles.imageComponent}
       alt={texts.imgAlt}
     />,
     <Image
+      key='2'
       fill={true}
       src={img2}
       className={styles.imageComponent}
