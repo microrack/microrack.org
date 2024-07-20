@@ -26,30 +26,6 @@ export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
 	const dotSize = 4;
 	const dotSpacing = 15;
 
-  const images = [
-    <Image
-      key='0'
-      fill={true}
-      src={img0}
-      className={styles.imageComponent}
-      alt={texts.imgAlt}
-    />,
-    <Image
-      key='1'
-      fill={true}
-      src={img1}
-      className={styles.imageComponent}
-      alt={texts.imgAlt}
-    />,
-    <Image
-      key='2'
-      fill={true}
-      src={img2}
-      className={styles.imageComponent}
-      alt={texts.imgAlt}
-    />
-  ];
-
 	return (
     <Container className={
       classnames(styles.container, className)
@@ -127,7 +103,29 @@ export const Hero: React.FC<HeroProps> = ({className}: HeroProps) => {
         columns={4}
         className={styles.imageItem}
       >
-        <Slider children={images} />
+        <Slider>
+          <Image
+            key='0'
+            fill={true}
+            src={img0}
+            className={styles.imageComponent}
+            alt={texts.imgAlt}
+          />
+          <Image
+            key='1'
+            fill={true}
+            src={img1}
+            className={styles.imageComponent}
+            alt={texts.imgAlt}
+          />
+          <Image
+            key='2'
+            fill={true}
+            src={img2}
+            className={styles.imageComponent}
+            alt={texts.imgAlt}
+          />
+        </Slider>
         {/* <Dots dotSize={dotSize} dotSpacing={dotSpacing} /> */}
       </Item>
       <Item columns={1}>
