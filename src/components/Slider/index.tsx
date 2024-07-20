@@ -14,14 +14,6 @@ export const Slider: React.FC<SliderProps> = ({ children, autoPlayInterval = 650
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, autoPlayInterval);
-
-    return () => clearInterval(interval);
-  }, [autoPlayInterval]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % children.length);
   };
@@ -37,6 +29,14 @@ export const Slider: React.FC<SliderProps> = ({ children, autoPlayInterval = 650
   const handleClick = () => {
     nextSlide();
   };
+
+	useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, autoPlayInterval);
+
+    return () => clearInterval(interval);
+  }, [autoPlayInterval, nextSlide]);
 
   const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
     touchStartX.current = e.touches[0].clientX;
