@@ -1,13 +1,35 @@
 .header {
   width: 100%;
-  display: flex;
-  padding: 20px 0;
   max-width: 1272px;
   border-bottom: 1px solid #232525;
+  position: relative;
+}
+
+.headerContent {
+  display: flex;
+  padding: 20px 0;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header a {
   color: black;
   text-decoration: none;
+}
+
+.burgerIcon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    flex-wrap: wrap;
+  }
+
+  .burgerIcon {
+    display: block;
+    order: 2;
+  }
 }

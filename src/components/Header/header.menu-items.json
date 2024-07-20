@@ -1,12 +1,16 @@
 [
 	{
+		"title": "About",
+		"href": "/about"
+	},
+	{
 		"title": "Forum",
-		"subtitle": "new",
 		"href": "https://forum.microrack.org/"
 	},
 	{
 		"title": "Shop",
-		"href": "#shop",
-		"subtitle": "soon"
+		"href": "https://forms.gle/CgNbhLSbxbahZK8BA",
+		"subtitle": "soon",
+		"external": true
 	}
 ]

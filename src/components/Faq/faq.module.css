@@ -1,0 +1,29 @@
+.faqContainer {
+  width: 100%;
+}
+
+.faqItem {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faqToggle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.faqAnswer {
+  padding: 1rem 0;
+}

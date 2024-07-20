@@ -1,11 +1,11 @@
-import {TextProps} from '../Text/text.types';
+import { TextProps } from '../Text/text.types';
 
 export type MenuItemProps = {
+  hideOnMobile?: boolean;
   subtitle?: string;
   external?: boolean;
   title: string;
   href: string;
-  hideOnMobile?: boolean;
 };
 
 export type MenuProps = {
@@ -14,4 +14,5 @@ export type MenuProps = {
   uppercase?: boolean;
   items: MenuItemProps[];
   headingColor?: TextProps['color'];
+  isOpen?: boolean; // Added isOpen prop
 };

@@ -1,24 +1,34 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import classnames from 'classnames';
 
 import { Logo } from '../Logo';
 import { Menu } from '../Menu';
 
-import {HeaderProps} from "./header.types";
+import { HeaderProps } from "./header.types";
 import styles from "./header.module.css";
 import items from './header.menu-items.json';
 
-/**
- * Header component
- */
-export const Header = ({className}: HeaderProps): JSX.Element => {
+export const Header = ({ className }: HeaderProps): JSX.Element => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const classNames = classnames(styles.header, className);
+  const burgerIcon = isMenuOpen ? '✖' : '☰';
 
   return (
     <header className={classNames}>
-      <Logo />
-      <Menu uppercase items={items}/>
+      <div className={styles.headerContent}>
+        <Logo />
+        <div className={styles.burgerIcon} onClick={toggleMenu}>
+          {burgerIcon}
+        </div>
+        <Menu uppercase items={items} isOpen={isMenuOpen} />
+      </div>
     </header>
   );
 };
-
