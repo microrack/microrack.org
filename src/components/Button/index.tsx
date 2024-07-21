@@ -21,7 +21,7 @@ export const Button = ({
   ? (
     <Link
       href={href}
-      className={classnames(classNames, styles.link)}
+      className={classnames(styles.link, classNames)}
       {...props}
     >
       {text}

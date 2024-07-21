@@ -7,69 +7,129 @@ import styles from './slider.module.css';
 interface SliderProps {
   children: React.ReactElement[];
   autoPlayInterval?: number;
+  showArrows?: boolean;  // New prop for controlling arrow visibility
 }
 
-export const Slider: React.FC<SliderProps> = ({ children, autoPlayInterval = 6500 }) => {
+export const Slider: React.FC<SliderProps> = ({ 
+  children, 
+  autoPlayInterval = 6500, 
+  showArrows = true  // Default value is true
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+  const autoPlayTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const resumeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % children.length);
+    setCurrentSlide(prev => (prev + 1) % children.length);
   }, [children.length]);
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + children.length) % children.length);
-  };
+  const prevSlide = useCallback(() => {
+    setCurrentSlide(prev => (prev - 1 + children.length) % children.length);
+  }, [children.length]);
 
-  const goToSlide = (index: number) => {
+  const goToSlide = useCallback((index: number) => {
     setCurrentSlide(index);
-  };
+  }, []);
 
-  const handleClick = () => {
-    nextSlide();
-  };
+  const stopAutoPlay = useCallback(() => {
+    setIsAutoPlaying(false);
+    if (autoPlayTimeoutRef.current) {
+      clearTimeout(autoPlayTimeoutRef.current);
+    }
+    if (resumeTimeoutRef.current) {
+      clearTimeout(resumeTimeoutRef.current);
+    }
+    resumeTimeoutRef.current = setTimeout(() => {
+      setIsAutoPlaying(true);
+    }, 10000);
+  }, []);
 
-	useEffect(() => {
-    const interval = setInterval(() => {
+  const handleUserInteraction = useCallback(() => {
+    stopAutoPlay();
+  }, [stopAutoPlay]);
+
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'ArrowRight') {
       nextSlide();
-    }, autoPlayInterval);
+      stopAutoPlay();
+    } else if (e.key === 'ArrowLeft') {
+      prevSlide();
+      stopAutoPlay();
+    }
+  }, [nextSlide, prevSlide, stopAutoPlay]);
 
-    return () => clearInterval(interval);
-  }, [autoPlayInterval, nextSlide]);
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    const handleDocumentClick = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setIsAutoPlaying(true);
+      }
+    };
+    document.addEventListener('click', handleDocumentClick);
 
-  const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('click', handleDocumentClick);
+    };
+  }, [handleKeyDown]);
+
+  useEffect(() => {
+    if (isAutoPlaying) {
+      autoPlayTimeoutRef.current = setTimeout(nextSlide, autoPlayInterval);
+    }
+    return () => {
+      if (autoPlayTimeoutRef.current) {
+        clearTimeout(autoPlayTimeoutRef.current);
+      }
+    };
+  }, [isAutoPlaying, autoPlayInterval, nextSlide, currentSlide]);
+
+  const handleTouchStart = useCallback((e: TouchEvent<HTMLDivElement>) => {
     touchStartX.current = e.touches[0].clientX;
-  };
+    stopAutoPlay();
+  }, [stopAutoPlay]);
 
-  const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
+  const handleTouchMove = useCallback((e: TouchEvent<HTMLDivElement>) => {
     touchEndX.current = e.touches[0].clientX;
-  };
+  }, []);
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = useCallback(() => {
     const difference = touchStartX.current - touchEndX.current;
     if (difference > 50) {
       nextSlide();
     } else if (difference < -50) {
       prevSlide();
     }
-  };
+  }, [nextSlide, prevSlide]);
 
-  const handleScroll = (e: React.WheelEvent<HTMLDivElement>) => {
+  const handleScroll = useCallback((e: React.WheelEvent<HTMLDivElement>) => {
     if (e.deltaX > 50) {
       nextSlide();
+      stopAutoPlay();
     } else if (e.deltaX < -50) {
       prevSlide();
+      stopAutoPlay();
     }
-  };
+  }, [nextSlide, prevSlide, stopAutoPlay]);
+
+  const handleArrowClick = useCallback((direction: 'prev' | 'next') => {
+    if (direction === 'prev') {
+      prevSlide();
+    } else {
+      nextSlide();
+    }
+    stopAutoPlay();
+  }, [prevSlide, nextSlide, stopAutoPlay]);
 
   return (
     <div 
       className={styles.sliderContainer} 
       ref={containerRef}
-      onClick={handleClick}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -80,19 +140,43 @@ export const Slider: React.FC<SliderProps> = ({ children, autoPlayInterval = 650
         ref={trackRef}
         style={{
           transform: `translateX(-${currentSlide * 100}%)`,
+          transition: isAutoPlaying ? 'transform 0.5s ease-in-out' : 'none',
         }}
       >
         {children.map((child, index) => (
           <div
             key={index}
             className={styles.sliderItem}
+            onClick={handleUserInteraction}
+            onMouseDown={handleUserInteraction}
+            onTouchStart={handleUserInteraction}
           >
             {React.cloneElement(child, {
               className: `${styles.imageComponent}`,
+              onMouseDown: handleUserInteraction,
+              onTouchStart: handleUserInteraction,
             })}
           </div>
         ))}
       </div>
+      {showArrows && (  // Only render arrows if showArrows is true
+        <>
+          <button 
+            className={`${styles.arrowButton} ${styles.leftArrow}`}
+            onClick={() => handleArrowClick('prev')}
+            aria-label="Previous slide"
+          >
+            <span className={styles.arrowIcon}>-</span>
+          </button>
+          <button 
+            className={`${styles.arrowButton} ${styles.rightArrow}`}
+            onClick={() => handleArrowClick('next')}
+            aria-label="Next slide"
+          >
+            <span className={styles.arrowIcon}>+</span>
+          </button>
+        </>
+      )}
       <div className={styles.sliderDots}>
         {children.map((_, index) => (
           <span
@@ -101,6 +185,7 @@ export const Slider: React.FC<SliderProps> = ({ children, autoPlayInterval = 650
             onClick={(e) => {
               e.stopPropagation();
               goToSlide(index);
+              stopAutoPlay();
             }}
           />
         ))}

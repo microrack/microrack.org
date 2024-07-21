@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en" style={{height: '100%'}}>
       <body style={{height: '100%'}}>{children}</body>
       <GoogleAnalytics gaId={GAID} />
+      <script async src="//www.instagram.com/embed.js"></script>
     </html>
   );
 }
-

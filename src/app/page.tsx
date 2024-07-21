@@ -11,19 +11,22 @@ import { Slider } from "@/components/Slider";
 import { Benefits } from "@/components/Benefits";
 // import { Timeline } from "@/components/Timeline";
 import { Separator } from "@/components/Separator";
+import { InstagramEmbed } from "@/components/InstagramEmbed";
 
 import styles from "./page.module.css";
 import faqData from "./faq.json";
 
+import img0 from "./assets/asortment3.jpg";
 import img1 from "./assets/cover-1.jpg";
-import img2 from "./assets/hero.jpg";
-import img0 from "./assets/hero.gif";
+import img2 from "./assets/diy2.jpg";
 import cover from "./assets/asortment.jpg";
 
 import texts from "./texts.json";
 
 const FORM_URL = "https://forms.gle/CgNbhLSbxbahZK8BA";
 const INST_URL = "https://instagram.com/microrack.synth";
+const EMBED_URL = "https://www.instagram.com/reel/C53Ta0dNKvy/";
+const EMBED_URL2 = "https://www.instagram.com/reel/C9pl0-CtjhV/";
 
 export default function Home() {
   return (
@@ -54,7 +57,12 @@ export default function Home() {
         </Hero>
         <Benefits className={styles.benefits}/>
         <Separator type="triangle" className={styles.separator} />
-        <About className={styles.about} cover={cover} />
+        <About className={styles.about} cover={cover}>
+          <Slider>
+            <InstagramEmbed url={EMBED_URL} />
+            <InstagramEmbed url={EMBED_URL2} />
+          </Slider>
+        </About>
         {/* <Timeline className={styles.timeline}/> */}
         <Separator type="saw" className={styles.separator}/>
         <FAQ className={styles.faq} faqData={faqData} />

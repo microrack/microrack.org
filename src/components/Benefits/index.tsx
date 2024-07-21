@@ -13,7 +13,7 @@ import { BenefitsProps } from './benefits.types';
  */
 export const Benefits = ({className}: BenefitsProps): JSX.Element => {
   return (
-    <section className={classnames(className, styles.benefits)}>
+    <section className={classnames(styles.benefits, className)}>
       {
         benefits.map((benefit: BenefitProps, index) => {
           return (
