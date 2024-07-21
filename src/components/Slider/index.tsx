@@ -159,24 +159,6 @@ export const Slider: React.FC<SliderProps> = ({
           </div>
         ))}
       </div>
-      {showArrows && (  // Only render arrows if showArrows is true
-        <>
-          <button 
-            className={`${styles.arrowButton} ${styles.leftArrow}`}
-            onClick={() => handleArrowClick('prev')}
-            aria-label="Previous slide"
-          >
-            <span className={styles.arrowIcon}>-</span>
-          </button>
-          <button 
-            className={`${styles.arrowButton} ${styles.rightArrow}`}
-            onClick={() => handleArrowClick('next')}
-            aria-label="Next slide"
-          >
-            <span className={styles.arrowIcon}>+</span>
-          </button>
-        </>
-      )}
       <div className={styles.sliderDots}>
         {children.map((_, index) => (
           <span

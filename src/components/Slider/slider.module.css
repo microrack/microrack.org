@@ -71,40 +71,6 @@
   object-fit: contain;
 }
 
-.arrowButton {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: rgba(199, 199, 199, 0.3);
-  border: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s ease;
-  z-index: 10;
-}
-
-.arrowButton:hover {
-  background-color: rgba(100, 100, 100, 0.5);
-}
-
-.leftArrow {
-  left: 5px;
-}
-
-.rightArrow {
-  right: 5px;
-}
-
-.arrowIcon {
-  color: white;
-  font-size: 24px;
-}
-
 @media (hover: hover) and (pointer: fine) {
   .dot:hover {
     background-color: rgba(100, 100, 100, 0.8);
@@ -114,11 +80,5 @@
 @media (prefers-reduced-motion: reduce) {
   .sliderTrack {
     transition: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .arrowButton {
-    display: none;
   }
 }
