@@ -14,14 +14,13 @@ import { Separator } from "@/components/Separator";
 import { InstagramEmbed } from "@/components/InstagramEmbed";
 
 import styles from "./page.module.css";
-import faqData from "./faq.json";
 
 import img0 from "./assets/asortment3.jpg";
 import img1 from "./assets/cover-1.jpg";
 import img2 from "./assets/diy2.jpg";
 import cover from "./assets/asortment.jpg";
 
-import texts from "./texts.json";
+import texts from "./page.json";
 
 const FORM_URL = "https://forms.gle/CgNbhLSbxbahZK8BA";
 const INST_URL = "https://instagram.com/microrack.synth";
@@ -65,7 +64,7 @@ export default function Home() {
         </About>
         {/* <Timeline className={styles.timeline}/> */}
         <Separator type="saw" className={styles.separator}/>
-        <FAQ className={styles.faq} faqData={faqData} />
+        <FAQ className={styles.faq} faqData={texts.faq} />
       </main>
       <Footer />
       <script src="/faq-enhance.js" async></script>
