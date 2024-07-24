@@ -68,6 +68,7 @@ export default function Home() {
         <FAQ className={styles.faq} faqData={faqData} />
       </main>
       <Footer />
+      <script src="/faq-enhance.js" async></script>
     </div>
   );
 }

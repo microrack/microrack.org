@@ -1,35 +1,25 @@
-'use client'
+// src/components/Faq/index.tsx
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Text } from '@/components/Text';
-
 import styles from './faq.module.css';
-import {FAQProps, FAQItem} from './faq.types';
+import { FAQProps, FAQItemType } from './faq.types';
 
-const Item: React.FC<{ item: FAQItem }> = ({ item }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className={styles.faqItem}>
-      <button 
-        className={styles.faqQuestion} 
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <Text size="m" weight="bold">
-          {item.question}
-        </Text>
-        <span className={styles.faqToggle}>{isOpen ? '×' : '+'}</span>
-      </button>
-      {isOpen && (
-        <div className={styles.faqAnswer}>
-          <Text size="s">
-            {item.answer}
-          </Text>
-        </div>
-      )}
+const FAQItem: React.FC<{ item: FAQItemType }> = ({ item }) => (
+  <details className={styles.faqItem}>
+    <summary className={styles.faqQuestion}>
+      <Text size="m" weight="bold">
+        {item.question}
+      </Text>
+      <span className={styles.faqToggle}>+</span>
+    </summary>
+    <div className={styles.faqAnswer}>
+      <Text size="s">
+        {item.answer}
+      </Text>
     </div>
-  );
-};
+  </details>
+);
 
 export const FAQ: React.FC<FAQProps> = ({className, faqData}) => {
   return (
@@ -39,10 +29,9 @@ export const FAQ: React.FC<FAQProps> = ({className, faqData}) => {
       </Text>
       <div className={styles.faqContainer}>
         {faqData.map((item, index) => (
-          <Item key={index} item={item} />
+          <FAQItem key={index} item={item} />
         ))}
       </div>
     </section>
-    
   );
 };

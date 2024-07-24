@@ -1,11 +1,3 @@
-.title {
-  margin-bottom: 32px;
-}
-
-.faqContainer {
-  width: 100%;
-}
-
 .faqItem {
   border-bottom: 1px solid #eaeaea;
 }
@@ -20,12 +12,22 @@
   border: none;
   text-align: left;
   cursor: pointer;
+  list-style: none;
+}
+
+.faqQuestion::-webkit-details-marker {
+  display: none;
 }
 
 .faqToggle {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 5px;
+  transition: transform 0.3s ease;
+}
+
+.faqItem[open] .faqToggle {
+  transform: rotate(45deg);
 }
 
 .faqAnswer {
