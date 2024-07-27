@@ -28,6 +28,7 @@ export default function Home() {
       <main className={styles.main}>
         <Hero className={styles.hero} formUrl={FORM_URL} texts={texts}>
           <Image
+            fill={true}
             src={img1}
             className={styles.imageComponent}
             alt={texts.imgAlt}
