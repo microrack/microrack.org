@@ -32,6 +32,7 @@ export default function Home() {
             src={img1}
             className={styles.imageComponent}
             alt={texts.imgAlt}
+            objectFit="cover"
           />
           {/* <Slider>
             
