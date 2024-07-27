@@ -6,7 +6,7 @@ export type ButtonProps = {
   /**
    * Is this the principal call to action on the page?
    */
-  variant?: 'primary' | 'secondary' | 'action' | 'promo';
+  variant?: 'primary' | 'secondary' | 'action' | 'promo' | 'link' | 'floating';
   /**
    * Button contents
    */

@@ -12,7 +12,7 @@ import {HeroProps} from './hero.types'
 
 import styles from "./hero.module.css";
 
-export const Hero: React.FC<HeroProps> = ({className, children, formUrl, instUrl, texts}: HeroProps) => {
+export const Hero: React.FC<HeroProps> = ({className, children, formUrl, texts}: HeroProps) => {
 	const dotSize = 4;
 	const dotSpacing = 15;
 
@@ -66,12 +66,6 @@ export const Hero: React.FC<HeroProps> = ({className, children, formUrl, instUrl
           variant="action"
           href={formUrl}
           text={texts.formButton}
-          className={styles.button}
-        />
-        <Button
-          variant="promo"
-          href={instUrl}
-          text={texts.instButton}
           className={styles.button}
         />
         <Dots

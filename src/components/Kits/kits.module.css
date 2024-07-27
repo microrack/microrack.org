@@ -1,0 +1,166 @@
+.kitsRoot {
+  margin-bottom: 42px;
+}
+
+.kitsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 20px;
+}
+
+.kitBlock {
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+.kitImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.kitInfo {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.title, .description {
+  margin-bottom: 20px;
+}
+
+.price {
+  gap: 20px;
+  display: flex;
+  color: #4a4a4a;
+  margin-bottom: 5px;
+}
+
+.earlyPrice {
+  color: #8A2BE2;
+}
+
+.fullPrice {
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: line-through;
+}
+
+.priceSubtitle {
+  flex: auto;
+  color: #8A2BE2;
+  margin-bottom: 20px;
+}
+
+.overlayContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 60%;
+  background-color: rgb(250, 250, 250);
+  border-radius: 4px 4px 0 0;
+  transition: transform 0.3s ease;
+  transform: translateY(100%);
+  box-shadow: darkgrey 0px 0px 2px;
+}
+
+.kitHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+.kitHeadingHeader {
+  display: flex;
+  padding: 15px 0 0;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.kitHeadingTitle {
+  margin: 0 10px 15px 20px;
+}
+
+.closeButton {
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  align-self: baseline;
+  margin: 10px 15px;
+}
+
+.kitHeadingDescription {
+  padding: 0 20px;
+  margin: -10px 0 15px 0;
+}
+
+.overlayContent {
+  max-height: 300px;
+  overflow-y: auto;
+  position: relative;
+  padding: 20px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.overlayContent::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
+}
+
+.overlayContent ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.quantityTitle {
+  margin-bottom: 10px;
+}
+
+.modulesListItem {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 5px;
+  align-items: baseline;
+}
+
+.scrollButtonContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.scrollButton {
+  width: 100px;
+}
+
+.overlayVisible {
+  transform: translateY(0%);
+}
+
+@media (max-width: 1024px) {
+  .kitsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .kitsContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .kitBlock {
+    min-height: auto;
+  }
+}

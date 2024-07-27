@@ -14,7 +14,7 @@ const FAQItem: React.FC<{ item: FAQItemType }> = ({ item }) => (
       <span className={styles.faqToggle}>+</span>
     </summary>
     <div className={styles.faqAnswer}>
-      <Text size="s">
+      <Text size="s" weight="light">
         {item.answer}
       </Text>
     </div>

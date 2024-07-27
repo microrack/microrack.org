@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import classnames from 'classnames';
 
+import { Text } from '@/components/Text';
+
 import { ButtonProps } from './button.types';
 import styles from "./button.module.css";
 
@@ -18,22 +20,22 @@ export const Button = ({
   const classNames = classnames(styles.button, styles[variant], className);
 
   return href
-  ? (
-    <Link
-      href={href}
-      className={classnames(styles.link, classNames)}
-      {...props}
-    >
-      {text}
-    </Link>
-  )
-  : (
-    <button
-      type="button"
-      className={classNames}
-      {...props}
-    >
-      {text}
-    </button>
-  );
+    ? (
+      <Link
+        className={classnames(variant === 'link' && styles.link, classNames)}
+        href={href}
+        {...props}
+      >
+        {text}
+      </Link>
+    )
+    : (
+      <button
+        type="button"
+        className={classNames}
+        {...props}
+      >
+        <Text className={styles.text} size="s">{text}</Text>
+      </button>
+    );
 }
