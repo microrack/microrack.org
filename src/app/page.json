@@ -163,8 +163,8 @@
     },
     {
       "title": "DIY Kit",
-      "earlyPrice": "from $79",
-      "fullPrice": "$89",
+      "earlyPrice": "from $39",
+      "fullPrice": "$49",
       "priceSubtitle": "early birds special price",
       "description": "A minimal kit for all the hackers and engineers out there. Features our Digital ESP32 Pro Module. Perfect for designing your own modules or circuits around MICRORACK.",
       "modules": [
