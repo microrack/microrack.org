@@ -171,9 +171,9 @@
     },
     {
       "title": "DIY Kit",
-      "earlyPrice": "from $79",
-      "fullPrice": "$89",
-      "priceSubtitle": "early birds price",
+      "earlyPrice": "from $39",
+      "fullPrice": "$49",
+     "priceSubtitle": "early birds price",
       "description": "A minimal kit for all the hackers and engineers out there. Features our Digital ESP32 Pro Module. Perfect for designing your own modules or circuits around MICRORACK.",
       "modules": [
         { "name": "Pro ESP32 Module: Oscilloscope, MIDI-CV", "quantity": 1 },
