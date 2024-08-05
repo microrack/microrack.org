@@ -64,6 +64,12 @@ export const Hero: React.FC<HeroProps> = ({className, children, formUrl, texts}:
         </Text>
         <Button
           variant="action"
+          href={texts.kickstarterUrl}
+          text={texts.kickstarterButton}
+          className={styles.button}
+        />
+        <Button
+          variant="link"
           href={formUrl}
           text={texts.formButton}
           className={styles.button}

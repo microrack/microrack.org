@@ -11,6 +11,8 @@ export type KitType = {
   description: string;
   modules: ModuleInfo[];
   imageUri: string;
+  preOrderUrl?: string;
+  orderButton?: string;
 };
 
 export type KitsData = KitType[];

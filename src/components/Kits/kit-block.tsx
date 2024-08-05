@@ -7,6 +7,8 @@ import { Button } from '@/components/Button';
 import styles from './kits.module.css';
 import { KitType } from './kits.types';
 
+import texts from '../../app/page.json';
+
 const KitBlock: React.FC<{ item: KitType }> = ({ item }) => {
   const [overlayVisible, setOverlayVisible] = useState(false);
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -53,19 +55,37 @@ const KitBlock: React.FC<{ item: KitType }> = ({ item }) => {
   return (
     <div className={styles.kitBlock}>
       <Image src={item.imageUri} alt={item.title} width={400} height={300} className={styles.kitImage} />
-      <div className={styles.kitInfo}>
-        <Text size="l" weight="bold" className={styles.title}>{item.title}</Text>
-        <div className={styles.price}>
-          {item.earlyPrice && (
-            <Text size="s" weight='bold' className={styles.earlyPrice}>{item.earlyPrice}</Text>
-          )}
-          <Text size="s" weight='bold' className={styles.fullPrice}>{item.fullPrice}</Text>
+      <div className={styles.kitContainer}>
+        <div className={styles.cta}>
+          <div className={styles.pricing}>
+            <div className={styles.price}>
+              {
+                item.earlyPrice && (
+                  <Text size="s" weight='bold' className={styles.earlyPrice}>{item.earlyPrice}</Text>
+                )
+              }
+              <Text size="s" weight='bold' className={styles.fullPrice}>{item.fullPrice}</Text>
+            </div>
+            {item.earlyPrice && (
+              <Text size="xxs" weight='light' className={styles.priceSubtitle}>{item.priceSubtitle}</Text>
+            )}
+          </div>
+          {
+            item.preOrderUrl && (
+              <Button
+                variant="promo"
+                href={item.preOrderUrl}
+                text={texts.orderButton}
+                className={styles.button}
+              />
+            )
+          }
         </div>
-        {item.earlyPrice && (
-          <Text size="xxs" weight='light' className={styles.priceSubtitle}>{item.priceSubtitle}</Text>
-        )}
-        <Text size="s" weight='light' className={styles.description}>{item.description}</Text>
-        <Button text="What's Inside" variant='secondary' onClick={toggleOverlay} />
+        <div className={styles.kitinfo}>
+          <Text size="l" weight="bold" className={styles.title}>{item.title}</Text>
+          <Text size="s" weight='light' className={styles.description}>{item.description}</Text>
+          <Button text="What's Inside" variant='secondary' onClick={toggleOverlay} />
+        </div>
       </div>
       <div className={`${styles.overlayContainer} ${overlayVisible ? styles.overlayVisible : ''}`}>
         <div className={styles.kitHeading}>
