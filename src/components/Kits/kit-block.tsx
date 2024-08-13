@@ -73,7 +73,7 @@ const KitBlock: React.FC<{ item: KitType }> = ({ item }) => {
           {
             item.preOrderUrl && (
               <Button
-                variant="promo"
+                variant="link"
                 href={item.preOrderUrl}
                 text={texts.orderButton}
                 className={styles.button}
