@@ -1,6 +1,6 @@
 {
   "kickstarterUrl": "https://www.kickstarter.com/projects/microrack/microrack-affordable-and-compact-modular-synthesizer",
-	"heroTitle": "The most accessible modular synthesizer",
+	"heroTitle": "The Most Accessible Modular Synthesizer",
 	"heroDescription": "Combine dozens of modules, build unique instruments, take them anywhere and have fun!",
 	"kickstarterButton": "Join Kickstarter",
 	"formButton": "Join Newsletter",
@@ -102,7 +102,7 @@
       "preOrderUrl": "https://www.kickstarter.com/projects/microrack/microrack-affordable-and-compact-modular-synthesizer"
     },
     {
-      "title": "Synth Learning Kit",
+      "title": "Explorer Kit",
       "earlyPrice": "from $259",
       "fullPrice": "$289",
       "priceSubtitle": "early birds price",
@@ -128,8 +128,8 @@
     },
     {
       "title": "Full Kit",
-      "earlyPrice": "from $379",
-      "fullPrice": "$399",
+      "earlyPrice": "from $399",
+      "fullPrice": "$449",
       "priceSubtitle": "early birds price",
       "description": "Our most comprehensive Kit. Unleash MICRORACK creative potential, create extraordinary music, and experiment with modular sound using everything we've designed so far!",
       "modules": [
