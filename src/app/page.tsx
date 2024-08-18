@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 import { FAQ } from "@/components/Faq";
 import { Hero } from "@/components/Hero";
 import { Kits } from "@/components/Kits";

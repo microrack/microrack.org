@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
 
 @font-face {
-  font-family: "martian-mono-normal-400-fallback";
+  font-family: 'martian-mono-normal-400-fallback';
   size-adjust: 116.681%;
-  src: local("Courier New");
+  src: local('Courier New');
 }
 
 * {
@@ -16,7 +16,7 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
-  font-family: "Martian Mono", "martian-mono-normal-400-fallback";
+  font-family: 'Martian Mono', 'martian-mono-normal-400-fallback';
 }
 
 a {
