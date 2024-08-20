@@ -2,7 +2,7 @@ import React from "react";
 import classnames from "classnames";
 
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 
 import { Text } from "../Text";
 

@@ -2,7 +2,7 @@
 import React from "react";
 import classNames from "classnames";
 
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 
 import {Props} from "./image-header.types";
 import styles from "./image-header.module.css";

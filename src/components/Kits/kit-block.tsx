@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
+import Image from "next-image-export-optimizer";
 import { Text } from '@/components/Text';
 import { Button } from '@/components/Button';
 import styles from './kits.module.css';

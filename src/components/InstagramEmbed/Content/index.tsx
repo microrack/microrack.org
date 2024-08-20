@@ -1,6 +1,9 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react';
+import classnames from 'classnames';
+
+import styles from './content.module.css';
 
 interface InstagramEmbedContentProps {
   url: string;
@@ -29,7 +32,7 @@ const InstagramEmbedContent: React.FC<InstagramEmbedContentProps> = ({ url, clas
   }, []);
 
   return (
-    <div ref={containerRef} className={className}>
+    <div ref={containerRef} className={classnames(styles.instaContainer, className)}>
       <blockquote
         className="instagram-media"
         data-instgrm-permalink={url}
