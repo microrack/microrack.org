@@ -56,7 +56,7 @@ const KitBlock: React.FC<{ item: KitType }> = ({ item }) => {
     <div className={styles.kitBlock}>
       <Image src={item.imageUri} alt={item.title} width={400} height={300} className={styles.kitImage} />
       <div className={styles.kitContainer}>
-        <div className={styles.cta}>
+        {/* <div className={styles.cta}>
           <div className={styles.pricing}>
             <div className={styles.price}>
               {
@@ -80,7 +80,7 @@ const KitBlock: React.FC<{ item: KitType }> = ({ item }) => {
               />
             )
           }
-        </div>
+        </div> */}
         <div className={styles.kitinfo}>
           <Text size="l" weight="bold" className={styles.title}>{item.title}</Text>
           <Text size="s" weight='light' className={styles.description}>{item.description}</Text>

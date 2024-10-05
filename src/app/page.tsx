@@ -30,25 +30,10 @@ export default function Home() {
           <Image
             fill={true}
             src={img1}
-            className={styles.imageComponent}
             alt={texts.imgAlt}
-            objectFit="cover"
+            className={styles.imageComponent}
+            style={{ objectFit: "cover" }}
           />
-          {/* <Slider>
-            
-            <Image
-              fill={true}
-              src={img0}
-              className={styles.imageComponent}
-              alt={texts.imgAlt}
-            />
-            <Image
-              fill={true}
-              src={img2}
-              className={styles.imageComponent}
-              alt={texts.imgAlt}
-            />
-          </Slider> */}
         </Hero>
         <Benefits className={styles.benefits}/>
         <Separator type="saw" className={styles.separator}/>

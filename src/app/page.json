@@ -2,7 +2,6 @@
   "kickstarterUrl": "https://www.kickstarter.com/projects/microrack/microrack-affordable-and-compact-modular-synthesizer?ref=website",
 	"heroTitle": "The Most Accessible Modular Synthesizer",
 	"heroDescription": "Combine dozens of modules, build unique instruments, take them anywhere, play, learn and have fun!",
-	"kickstarterButton": "Buy on Kickstarter",
 	"formButton": "Join Newsletter",
 	"instButton": "Follow on Instagram",
 	"imgAlt": "MICRORACK - The most accessible modular synthesizer",
@@ -64,8 +63,8 @@
 	"kits": [
     {
       "title": "Synth Starter Kit",
-      "earlyPrice": "from $119",
-      "fullPrice": "$149",
+      "earlyPrice": "",
+      "fullPrice": "$159",
       "priceSubtitle": "early birds price",
       "description": "Portable and affordable kit for starting with modular synths. Small but mighty, this kit is designed to let you start having fun with the MICRORACK right away.",
       "modules": [
@@ -80,12 +79,12 @@
         { "name": "Type C + DC Power", "quantity": 1 }
       ],
       "imageUri": "/images/synth.jpg",
-      "preOrderUrl": "https://www.kickstarter.com/projects/microrack/microrack-affordable-and-compact-modular-synthesizer"
+      "preOrderUrl": ""
     },
     {
       "title": "Pedal Starter Kit",
-      "earlyPrice": "from $119",
-      "fullPrice": "$149",
+      "earlyPrice": "",
+      "fullPrice": "$159",
       "priceSubtitle": "early birds price",
       "description": "Portable and affordable kit for starting with modular pedals. Lets you easily connect MICRORACK to external sound sources and experiment with instrument and voice effects.",
       "modules": [
@@ -100,12 +99,12 @@
         { "name": "Type C + DC Power", "quantity": 1 }
       ],
       "imageUri": "/images/pedal.jpg",
-      "preOrderUrl": "https://www.kickstarter.com/projects/microrack/microrack-affordable-and-compact-modular-synthesizer"
+      "preOrderUrl": ""
     },
     {
       "title": "Explorer Kit",
-      "earlyPrice": "from $259",
-      "fullPrice": "$289",
+      "earlyPrice": "",
+      "fullPrice": "$299",
       "priceSubtitle": "early birds price",
       "description": "A rich assortment of MICRORACK modules, each accompanied by video tutorials. Designed for step-by-step learning and teaching of sound, synth, and modular fundamentals.",
       "modules": [
@@ -126,12 +125,12 @@
         { "name": "Power Extender", "quantity": 1 }
       ],
       "imageUri": "/images/learning.jpg",
-      "preOrderUrl": "https://www.kickstarter.com/projects/microrack/microrack-affordable-and-compact-modular-synthesizer"
+      "preOrderUrl": ""
     },
     {
       "title": "Full Kit",
-      "earlyPrice": "from $399",
-      "fullPrice": "$449",
+      "earlyPrice": "",
+      "fullPrice": "$499",
       "priceSubtitle": "early birds price",
       "description": "Our most comprehensive Kit. Unleash MICRORACK creative potential, create extraordinary music, and experiment with modular sound using everything we've designed so far!",
       "modules": [
@@ -156,11 +155,11 @@
         { "name": "Power Extender", "quantity": 1 }
       ],
       "imageUri": "/images/full.jpg",
-      "preOrderUrl": "https://www.kickstarter.com/projects/microrack/microrack-affordable-and-compact-modular-synthesizer"
+      "preOrderUrl": ""
     },
     {
       "title": "Rack Chassis Addon",
-      "earlyPrice": "from $79",
+      "earlyPrice": "",
       "fullPrice": "$89",
       "priceSubtitle": "early birds price",
       "description": "Additional Chassis for using MICRORACK as a fully compatible Eurorack module, or to take your synth on the go with the built-in USB Type-C port.",
@@ -169,12 +168,12 @@
         { "name": "3.5mm Jack Patch Wire Adapters", "quantity": 4 }
       ],
       "imageUri": "/images/rack.jpg",
-      "preOrderUrl": "https://www.kickstarter.com/projects/microrack/microrack-affordable-and-compact-modular-synthesizer"
+      "preOrderUrl": ""
     },
     {
       "title": "DIY Kit",
-      "earlyPrice": "from $39",
-      "fullPrice": "$49",
+      "earlyPrice": "",
+      "fullPrice": "$89",
      "priceSubtitle": "early birds price",
       "description": "A minimal kit for all the hackers and engineers out there. Features our Digital ESP32 Pro Module. Perfect for designing your own modules or circuits around MICRORACK.",
       "modules": [
@@ -184,7 +183,7 @@
         { "name": "Type C + DC Power", "quantity": 1 }
       ],
       "imageUri": "/images/diy.jpg",
-      "preOrderUrl": "https://www.kickstarter.com/projects/microrack/microrack-affordable-and-compact-modular-synthesizer"
+      "preOrderUrl": ""
     }
   ]
 }
