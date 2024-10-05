@@ -6,8 +6,8 @@ export type HeroProps = {
 		heroTitle: string;
 		heroDescription: string;
 		imgAlt: string;
-		kickstarterUrl: string;
-		kickstarterButton: string;
+		kickstarterUrl?: string;
+		kickstarterButton?: string;
 		formButton: string;
 		instButton: string;
 	};
